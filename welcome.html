@@ -1,0 +1,44 @@
+<html>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+
+  
+  $("button").click(function(){
+  	document.cookie = "ITS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  	window.location.href="index.html";
+  });
+
+  var d=document.cookie;
+  var name = "ITS=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  var cv="";
+  for(var i = 0; i <ca.length; i++) {
+  	var c = ca[i];
+  	while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      cv=c.substring(name.length, c.length);
+      break;
+    }
+  }
+  if(cv=="")
+  {
+  	window.location.href="index.html";
+  }
+  else
+  {
+  	$("div").append("<h1>Welcome "+cv+"</h1>");
+  }
+  
+});
+</script>
+<div></div>
+<button>Logout</button>
+</body>
+</html>
