@@ -35,6 +35,9 @@ $(document).ready(function(){
   });
 });
 </script>
+<script>
+       window.history.replaceState('','','/');
+</script>
 	<style type="text/css">
   .login{
   background: url('homebg.jpeg');
@@ -44,9 +47,17 @@ $(document).ready(function(){
 body{
   overflow-x: hidden;
 }
+html{
+  -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
 </style>
 </head>
-<body>
+<body oncontextmenu="return false">
 
 <div class="h-screen font-sans login bg-cover">
 <div class="container mx-auto h-full flex flex-1 justify-center items-center">
