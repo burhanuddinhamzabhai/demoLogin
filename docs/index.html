@@ -7,6 +7,7 @@
 <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 <script>
 $(document).ready(function(){
+   window.history.replaceState('','','/');
   $('#loginBtn').click(function(){
 
   	var ino=itsno.value;
@@ -36,7 +37,7 @@ $(document).ready(function(){
 });
 </script>
 <script>
-       window.history.replaceState('','','/');
+      
         window.oncontextmenu = function () {
             return false;
         }
