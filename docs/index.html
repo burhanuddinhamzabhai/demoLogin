@@ -9,7 +9,6 @@
 $(document).ready(function(){
    window.history.replaceState('','','/');
   $('#loginBtn').click(function(){
-    alert(window.location.href);
   	var ino=itsno.value;
   	var pwd=pass.value;
     var flag=false;
@@ -30,7 +29,7 @@ $(document).ready(function(){
           //$("div").append(field.ITS_ID+"-"+field.Password+ "<br>");
       });
       if(flag==false)
-       alert("The URL of this page is: " + window.location.href);
+      alert("Invalid ITS No OR Password...");
     });
     
   });
