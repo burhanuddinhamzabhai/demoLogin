@@ -10,30 +10,30 @@ $(document).ready(function(){
    window.history.replaceState('','','/');
   $('#loginBtn').click(function(){
     alert(window.location.href);
-  // 	var ino=itsno.value;
-  // 	var pwd=pass.value;
-  //   var flag=false;
-  //   $.getJSON("/test/test.js", function(result){
+  	var ino=itsno.value;
+  	var pwd=pass.value;
+    var flag=false;
+    $.getJSON("/test/test.js", function(result){
 
-  //     $.each(result, function(i, field){
-  //     		if(ino==field.ITS_ID && pwd==field.ITS_ID)
-  //     		{
-  //           flag=true;
-  //     			var d = new Date();
-  // 				d.setTime(d.getTime() + (24*60*60*1000));
-  // 				var expires = "expires="+ d.toUTCString();
-  // 				document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
-  //     			window.location.href="welcome.html";
-  //           return false;
-  //     		}
+      $.each(result, function(i, field){
+      		if(ino==field.ITS_ID && pwd==field.ITS_ID)
+      		{
+            flag=true;
+      			var d = new Date();
+  				d.setTime(d.getTime() + (24*60*60*1000));
+  				var expires = "expires="+ d.toUTCString();
+  				document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
+      			window.location.href="welcome.html";
+            return false;
+      		}
 
-  //         //$("div").append(field.ITS_ID+"-"+field.Password+ "<br>");
-  //     });
-  //     if(flag==false)
-  //     alert("Invalid ITS No OR Password...");
-  //   });
+          //$("div").append(field.ITS_ID+"-"+field.Password+ "<br>");
+      });
+      if(flag==false)
+       alert("The URL of this page is: " + window.location.href);
+    });
     
-  // });
+  });
 });
 </script>
 <script>
