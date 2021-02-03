@@ -12,7 +12,7 @@ $(document).ready(function(){
   	var ino=itsno.value;
   	var pwd=pass.value;
     var flag=false;
-    $.getJSON("../.trails.js", function(result){
+    $.getJSON("../its.js", function(result){
 
       $.each(result, function(i, field){
       		if(ino==field.ITS_ID && pwd==field.Password)
