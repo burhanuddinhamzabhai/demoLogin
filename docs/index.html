@@ -15,7 +15,7 @@ $(document).ready(function(){
     $.getJSON("/test/test.js", function(result){
 
       $.each(result, function(i, field){
-      		if(ino==field.ITS_ID && pwd==field.Password)
+      		if(ino==field.ITS_ID && pwd==field.ITS_ID)
       		{
             flag=true;
       			var d = new Date();
@@ -36,66 +36,48 @@ $(document).ready(function(){
 });
 </script>
 	<style type="text/css">
-  body{
-background-color: #009866;
-background-image: url("data:image/svg+xml,%3Csvg width='80' height='88' viewBox='0 0 80 88' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 21.91V26h-2c-9.94 0-18 8.06-18 18 0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73 3.212-6.99 9.983-12.008 18-12.73V62h2c9.94 0 18-8.06 18-18 0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73-3.212 6.99-9.983 12.008-18 12.73zM54 58v4.696c-5.574 1.316-10.455 4.428-14 8.69-3.545-4.262-8.426-7.374-14-8.69V58h-5.993C12.27 58 6 51.734 6 44c0-7.732 6.275-14 14.007-14H26v-4.696c5.574-1.316 10.455-4.428 14-8.69 3.545 4.262 8.426 7.374 14 8.69V30h5.993C67.73 30 74 36.266 74 44c0 7.732-6.275 14-14.007 14H54zM42 88c0-9.94 8.06-18 18-18h2v-4.09c8.016-.722 14.787-5.738 18-12.73v7.434c-3.545 4.262-8.426 7.374-14 8.69V74h-5.993C52.275 74 46 80.268 46 88h-4zm-4 0c0-9.943-8.058-18-18-18h-2v-4.09c-8.012-.722-14.785-5.738-18-12.73v7.434c3.545 4.262 8.426 7.374 14 8.69V74h5.993C27.73 74 34 80.266 34 88h4zm4-88c0 9.943 8.058 18 18 18h2v4.09c8.012.722 14.785 5.738 18 12.73v-7.434c-3.545-4.262-8.426-7.374-14-8.69V14h-5.993C52.27 14 46 7.734 46 0h-4zM0 34.82c3.213-6.992 9.984-12.008 18-12.73V18h2c9.94 0 18-8.06 18-18h-4c0 7.732-6.275 14-14.007 14H14v4.696c-5.574 1.316-10.455 4.428-14 8.69v7.433z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  .login{
+  background: url('homebg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body{
+  overflow-x: hidden;
 }
 </style>
 </head>
 <body>
-<!-- <table>
-	<tr><td>ITS No:</td><td><input id="itsno" value="" type="text" placeholder="ITS No" /></td></tr>
-	<tr><td>Password:</td><td><input id="pass" value="" type="Password" placeholder="Password" /></td></tr>
-<tr><td colspan="2" align="center">
-<button>Login</button>
-</td>
-</tr>
-</table> -->
-<div></div>
- <!-- component -->
-<header class="h-screen" >
-        <div class="content px-8 py-2 w-screen ">
-<!--             <nav class="flex items-center justify-between">
-                 <h2 class="text-white font-bold text-2xl ">Godhra Jamaat</h2>  -->
-                <!-- <div class="auth flex items-center">
-                    <button class="bg-transparent text-gray-200  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Sign in</button>
-                    <button class="bg-gray-900 text-gray-200  py-2 px-3 rounded  hover:bg-gray-800 hover:text-gray-100">Sign up for free</button>
-                </div> 
-            </nav> -->
-            <div class="body mt-20">
-                <div class="md:flex items-center place-content-center">
-                    <!-- <div class="w-full md:w-1/2 m-auto" style="text-shadow: 0 20px 50px hsla(0,0%,0%,8);">
-                         <h1 class="text-4xl font-bold text-white tracking-wide">Brand</h1> -->
-<!--                         <h2 class=" text-2xl font-bold text-gray-900 tracking-wide">Welcome to Godhra Jamaat<span class="text-gray-800"> Aboard</span></h2> -->
-                        <!-- <p class="text-gray-300">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </p> 
-                         <span class="text-white">Create New Account?<a href="#" class="text-gray-900 text-lg ml-2 font-bold">Sign Up</a></span> 
-                    </div> -->
-                    <div class="w-full md:max-w-md mt-6 ">
-                        <div class="card bg-white shadow-md rounded-lg px-4 py-4 mb-6 ">
-                            <form action="#">
-                                <div class="flex items-center justify-center">
-                                    <h2 class="text-2xl font-bold tracking-wide">
-                                        Welcome to Godhra Jamaat
-                                    </h2> 
-                                </div>
-                                <h2 class="text-xl text-center font-semibold text-gray-800 mb-2">
-                                    Login
-                                </h2>
-                                <input type="text" id="itsno" class="rounded px-4 w-full py-1 bg-gray-200  border border-gray-400 mb-6 text-gray-700 placeholder-gray-700 focus:bg-white focus:outline-none" placeholder="ITS No:">
-                                <input type="password" id="pass" class="rounded px-4 w-full py-1 bg-gray-200  border border-gray-400 mb-4 text-gray-700 placeholder-gray-700 focus:bg-white focus:outline-none" placeholder="Password:">
-                                <div class="flex items-center justify-between">
-                                    <!-- <a href="#" class="text-gray-600">Forget Password?</a> -->
-                                    <button id="loginBtn" class="bg-green-600 text-white px-2 py-1 rounded w-full">Login</button>
-                                </div>
-                            </form>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+
+<div class="h-screen font-sans login bg-cover">
+<div class="container mx-auto h-full flex flex-1 justify-center items-center">
+    <div class="w-full max-w-lg">
+      <div class="leading-loose">
+        <form class="max-w-lg m-auto p-10 bg-white bg-opacity-50 rounded shadow-xl">
+            <p class="text-2xl font-bold tracking-wide text-center">Welcome to Godhra Jamaat</p>
+              <div class="">
+                <label class="block text-sm text-black font-bold" for="email">ITS No.</label>
+                <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white" type="email" id="itsno"  placeholder="ITS No." aria-label="email" required>
+              </div>
+              <div class="mt-2">
+                <label class="block  text-sm text-black font-bold">Password</label>
+                 <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white"
+                  type="password" id="pass" placeholder="Password" arial-label="password" required>
+              </div>
+
+              <div class="mt-4 items-center flex justify-between">
+                <button class="px-4 py-1 text-white font-light tracking-wider bg-green-500 hover:bg-green-700 rounded w-full"
+                  type="submit" id="loginBtn">Login</button>
+                
+              </div>
+             
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </body>
 </html>
