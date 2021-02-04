@@ -47,6 +47,7 @@ user-select: none;
 </footer>
 <script type="text/javascript">
  $(document).ready(function(){  
+	 window.history.replaceState('','','/');
   $("#logoutBtn").click(function(){
    document.cookie = "ITS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
    window.location.href="index.html";
