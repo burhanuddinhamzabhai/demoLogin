@@ -1,8 +1,10 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Godhra Jamaat</title>
+  <meta name="author" content="Burhanuddin Hamzabhai">
 <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
   <style type="text/css">
@@ -19,10 +21,42 @@ html{
 -o-user-select: none;
 user-select: none;
 }
+.content{
+    display: none;
+}
+.loader{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #009866;
+    position: absolute;
+}
+.loader>div{
+    height: 100px;
+    width: 100px;
+    border: 15px solid #fff;
+    border-top-color: #F1C40F;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
 </style>
 </head>
 <body oncontextmenu="return false">
-	<section class="text-gray-600 body-font h-screen">
+  <div class="loader">
+        <div></div>
+    </div>
+	<section class="content text-gray-600 body-font h-screen">
     
   <div class="container mx-auto flex px-5 items-center justify-center flex-col align-middle h-screen">
     <h1 id="wText" class="sm:text-3xl text-2xl text-center font-bold title-font text-white  mb-10"></h1>
@@ -34,7 +68,7 @@ user-select: none;
     </div>
   </div>
 </section>
-	<footer class="text-white body-font">
+	<!-- <footer class="text-white body-font">
   
   <div class=""  style="background:#009866;">
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
@@ -44,7 +78,13 @@ user-select: none;
       <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-white text-sm"><a href="https://burhanuddinhamzabhai.dev/">Burhanuddin Hamzabhai</a></span>
     </div>
   </div>
-</footer>
+</footer> -->
+<script>
+        $(window).on('load',function(){
+            $(".loader").fadeOut(1000);
+            $(".content").fadeIn(1000);
+        });
+    </script>
 <script type="text/javascript">
  $(document).ready(function(){  
 	 window.history.replaceState('','','/');
