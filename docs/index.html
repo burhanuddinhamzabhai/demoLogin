@@ -83,7 +83,7 @@ $(document).ready(function(){
   	var ino=itsno.value;
   	var pwd=pass.value;
     var flag=false;
-    $.getJSON("/test/test.js", function(result){
+    $.getJSON("/test/ashara.js", function(result){
 
       $.each(result, function(i, field){
       		if(ino==field.ITS_ID && pwd==field.ITS_ID)
