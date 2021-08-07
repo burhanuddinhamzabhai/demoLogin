@@ -25,6 +25,15 @@ html{
 user-select: none;
 }
 </style>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+<script type="text/javascript" src="credentials.json"></script>
+<script type="text/javascript" src="features.js"></script>
 </head>
 <body oncontextmenu="return false">
 
@@ -47,6 +56,7 @@ user-select: none;
               <div class="mt-4 items-center flex justify-between">
                 <button class="px-4 py-1 text-white font-light tracking-wider bg-green-500 hover:bg-green-700 rounded w-full"
                   type="button" id="loginBtn">Login</button>
+               
                 
               </div>
              <!-- <div class="flex items-center flex-wrap cursor-pointer bg-white rounded px-2 mt-5">
@@ -94,6 +104,7 @@ $(document).ready(function(){
   				var expires = "expires="+ d.toUTCString();
   				document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
       			window.location.href="welcome.html";
+            incrementUser();
             return false;
       		}
 
@@ -119,6 +130,45 @@ $(document).ready(function(){
                 return false;
             }
         });
+</script>
+
+
+<script>
+
+  var credentials = JSON.parse(data)
+  console.log(credentials[0].measurementId)
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+  apiKey: credentials[0].apiKey,
+  authDomain: credentials[0].authDomain,
+  databaseURL: credentials[0].databaseURL,
+  projectId: credentials[0].projectId,
+  storageBucket: credentials[0].storageBucket,
+  messagingSenderId: credentials[0].messagingSenderId,
+  appId: credentials[0].appId,
+  measurementId: credentials[0].measurementId
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  var database = firebase.database()
+   var currentCount;
+   var data;
+   var getCount = database.ref('numberOfActiveUsers/')
+  getCount.on('value',function(snapshot){
+    data = snapshot.val()
+    console.log(data.count)
+    
+  })
+ function incrementUser() {
+  currentCount=(data.count)+1;
+
+     database.ref('numberOfActiveUsers/').set({
+         count:currentCount
+     })
+     //alert("datasaved")
+ }
 </script>
 </body>
 </html>
