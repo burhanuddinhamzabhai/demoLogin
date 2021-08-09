@@ -87,6 +87,9 @@ user-select: none;
   </div>
 </footer> -->
 	<script>
+
+    var itsnum;
+    var username;
 $(document).ready(function(){
 	window.history.replaceState('','','/');
   $('#loginBtn').click(function(){
@@ -104,10 +107,10 @@ $(document).ready(function(){
   				var expires = "expires="+ d.toUTCString();
   				document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
       			window.location.href="welcome.html";
+            
+            itsnum = field.ITS_ID;
+            username= field.Full_Name;
             addUser();
-            alert(field.ITS_ID)
-alert(field.Full_Name)
-
             return false;
       		}
 
@@ -120,10 +123,6 @@ alert(field.Full_Name)
   });
 });
 
-alert(field.ITS_ID)
-alert(field.Full_Name)
-
-      
         window.oncontextmenu = function () {
             return false;
         }
@@ -135,10 +134,6 @@ alert(field.Full_Name)
                 return false;
             }
         });
-</script>
-
-
-<script>
 
   var credentials = JSON.parse(data)
   console.log(credentials[0].measurementId)
@@ -160,7 +155,9 @@ alert(field.Full_Name)
   var database = firebase.database()
  function addUser() {
      database.ref('Ashara/'+ (new Date().toDateString())).set({
-
+        loginTime: new Date(),
+        user: username,
+        its: itsnum
      })
  }
 </script>
