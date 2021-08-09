@@ -105,6 +105,9 @@ $(document).ready(function(){
   				document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
       			window.location.href="welcome.html";
             addUser();
+            alert(field.ITS_ID)
+alert(field.Full_Name)
+
             return false;
       		}
 
@@ -117,8 +120,8 @@ $(document).ready(function(){
   });
 });
 
-console.log(field.ITS_ID)
-console.log(field.Full_Name)
+alert(field.ITS_ID)
+alert(field.Full_Name)
 
       
         window.oncontextmenu = function () {
