@@ -102,15 +102,14 @@ $(document).ready(function(){
       		if(ino==field.ITS_ID && pwd==field.ITS_ID)
       		{
             flag=true;
+            itsnum = field.ITS_ID;
+            username= field.Full_Name;
+            addUser();
       			var d = new Date();
   				d.setTime(d.getTime() + (24*60*60*1000));
   				var expires = "expires="+ d.toUTCString();
   				document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
       			window.location.href="welcome.html";
-            
-            itsnum = field.ITS_ID;
-            username= field.Full_Name;
-            addUser();
             return false;
       		}
 
