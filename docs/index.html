@@ -96,6 +96,9 @@ $(document).ready(function(){
   	var ino=itsno.value;
   	var pwd=pass.value;
     var flag=false;
+    if(ino != pwd){
+      alert("its and password mismatched");
+    }else{
     $.getJSON("/test/test.js", function(result){
 
       $.each(result, function(i, field){
@@ -119,7 +122,7 @@ $(document).ready(function(){
       if(flag==false)
       alert("You are not autheticated to view this content, please contact jamaat office.");
     });
-    
+  }
   });
 });
 
