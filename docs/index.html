@@ -25,7 +25,7 @@ html{
 user-select: none;
 }
 </style>
-<script type="text/javascript" src="credentials.json"></script>
+<script type="text/javascript" src="test/credentials.json"></script>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
@@ -157,7 +157,8 @@ $(document).ready(function(){
  function addUser() {
   var time = new Date();
   var date = new Date().toDateString();
-     database.ref('Ashara/'+ "time").set({
+  var path = time + itsnum;
+     database.ref('Ashara/'+ path).set({
         loginTime: time,
         user: username,
         its: itsnum,
