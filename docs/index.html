@@ -157,7 +157,7 @@ $(document).ready(function(){
   var date = new Date().toDateString();
  function addUser() {
      database.ref('Ashara/'+ (new Date()) + itsnum).set({
-        loginTime: date,
+        loginTime: time,
         user: username,
         its: itsnum,
         loginDate: date
