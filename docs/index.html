@@ -155,9 +155,10 @@ $(document).ready(function(){
   var database = firebase.database()
   
  function addUser() {
-  var time = new Date();
+  today = new Date();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   var date = new Date().toDateString();
-  var path = time + itsnum;
+  var path = itsnum + " at " + time;
      database.ref('Ashara/'+ path).set({
         loginTime: time,
         user: username,
