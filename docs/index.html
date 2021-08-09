@@ -161,7 +161,7 @@ $(document).ready(function(){
   var d = new Date().getDay();
   var dayName = days[d];
   var date = new Date().toDateString();
-  var path = itsnum + " at " + time;
+  var path = itsnum + " on " + dayName + " at " + time;
      database.ref('Ashara/'+ path).set({
         loginTime: time,
         user: username,
