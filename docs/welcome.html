@@ -96,16 +96,13 @@ user-select: none;
   var d=document.cookie;
   var name = "ITS=";
   var decodedCookie = decodeURIComponent(document.cookie);
-
   var ca = decodedCookie.split(';');
   var cv="";
   for(var i = 0; i <ca.length; i++) {
    var c = ca[i];
-     console.log(c)
    while (c.charAt(0) == ' ') {
       c = c.substring(1);
     }
-      console.log(c)
     if (c.indexOf(name) == 0) {
       cv=c.substring(name.length, c.length);
       break;

@@ -104,7 +104,7 @@ $(document).ready(function(){
   				var expires = "expires="+ d.toUTCString();
   				document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
       			window.location.href="welcome.html";
-            incrementUser();
+            addUser();
             return false;
       		}
 
@@ -116,8 +116,10 @@ $(document).ready(function(){
     
   });
 });
-</script>
-<script>
+
+console.log(field.ITS_ID)
+console.log(field.Full_Name)
+
       
         window.oncontextmenu = function () {
             return false;
@@ -153,21 +155,10 @@ $(document).ready(function(){
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
   var database = firebase.database()
-   var currentCount;
-   var data;
-   var getCount = database.ref('numberOfActiveUsers/')
-  getCount.on('value',function(snapshot){
-    data = snapshot.val()
-    console.log(data.count)
-    
-  })
- function incrementUser() {
-  currentCount=(data.count)+1;
+ function addUser() {
+     database.ref('Ashara/'+ (new Date().toDateString())).set({
 
-     database.ref('numberOfActiveUsers/').set({
-         count:currentCount
      })
-     //alert("datasaved")
  }
 </script>
 </body>
