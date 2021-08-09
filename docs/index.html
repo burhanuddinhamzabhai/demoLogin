@@ -153,10 +153,11 @@ $(document).ready(function(){
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
   var database = firebase.database()
+  
+ function addUser() {
   var time = new Date();
   var date = new Date().toDateString();
- function addUser() {
-     database.ref('Ashara/'+ (new Date())).set({
+     database.ref('Ashara/'+ time).set({
         loginTime: time,
         user: username,
         its: itsnum,
