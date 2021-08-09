@@ -157,13 +157,17 @@ $(document).ready(function(){
  function addUser() {
   today = new Date();
   var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var d = new Date().getDay();
+  var dayName = days[d];
   var date = new Date().toDateString();
   var path = itsnum + " at " + time;
      database.ref('Ashara/'+ path).set({
         loginTime: time,
         user: username,
         its: itsnum,
-        loginDate: date
+        loginDate: date,
+        loginDay: dayName
      })
  }
 </script>
