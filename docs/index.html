@@ -167,8 +167,17 @@ $(document).ready(function(){
         its: itsnum,
         loginDate: date,
         loginDay: dayName
-     })
-     window.location.href="welcome.html";
+     }, (error) => {
+  if (error) {
+    // The write failed...
+    alert("error")
+  } else {
+    // Data saved successfully!
+    alert("data saved")
+    window.location.href="welcome.html";
+
+  }
+     });
  }
 </script>
 </body>
