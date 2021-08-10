@@ -115,6 +115,15 @@ user-select: none;
   else
   {
    $("#wText").append("Welcome "+cv);
+
+   if(cv == "Burhan bhai Mulla Hamza bhai Bariyawala"){
+    var database = firebase.database();
+    var starCountRef = firebase.database().ref('Ashara/');
+    starCountRef.on('value', (snapshot) => {
+    const data = snapshot.val();
+    console.log=data;
+});
+   }
   }
   
 });
