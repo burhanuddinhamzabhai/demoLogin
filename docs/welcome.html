@@ -53,14 +53,14 @@ user-select: none;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background-color: #009866;
+    background-color: #f1eee9;
     position: absolute;
 }
 .loader>div{
     height: 100px;
     width: 100px;
     border: 15px solid #fff;
-    border-top-color: #F1C40F;
+    border-top-color: #8a2900;
     position: absolute;
     margin: auto;
     top: 0;
@@ -78,24 +78,24 @@ user-select: none;
 </style>
 </head>
 <body oncontextmenu="return false">
-  <!-- <div class="loader">
+  <div class="loader">
         <div></div>
-    </div> -->
+    </div>
  <section class="content text-gray-600 body-font">
    <!-- <div style="height: 60px; width:100%; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;"class="">
       <h1 id="wText" class="sm:text-xl text-xl text-center font-semibold title-font text-gray-700 bg-black" style="line-height: 60px;">Burhanuddin Mulla Hamzabhai<span id="logoutBtn" class=" font-bold text-green-900 bg-white border-0 py-2 px-6 focus:outline-none hover:bg-green-600 hover:text-white rounded text-lg text-right">Logout</span></h1>
       <button >Logout</button>
 
     </div> -->
-          <header style="height: 60px; width:100%; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;">
+          <header style="height: 60px; width:100%; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #eadfce;position: fixed;">
         <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
-            <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+            <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
                 </nav>
             <a
-                class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center lg:items-center lg:justify-center">
-                <span class="ml-3 text-xl"style="line-height:60px;"id="wText">Burhanuddin</span>
+                class="flex order-first lg:order-none w-3/5    title-font font-medium items-center lg:items-center lg:justify-center">
+                <span class="ml-3 text-xl"style="line-height:60px;"id="wText">Aliasgar bhai  Najmuddin bhai Saherwala</span>
             </a>
-            <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+            <div class="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
                 <button class="text-white ml-4 py-2 px-3 rounded-lg" id="logoutBtn" style="background-color: #8a2900;">
                     Logout
                 </button>
@@ -116,7 +116,7 @@ user-select: none;
       0 0px 0px rgba(0, 0, 0, 0.072),
       0 0px 0px rgba(0, 0, 0, 0.086),
       0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded">
-      	<iframe scrolling src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" class=" object-cover object-center rounded" style="width: 100%; height: 60%;" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>  
+      	<iframe scrolling src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" class=" object-cover object-center rounded mb-10" style="width: 100%; height: 60%;" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>  
       </div>
       
 
@@ -210,7 +210,7 @@ user-select: none;
   firebase.analytics();
  var database = firebase.database()
     var database = firebase.database();
-    firebase.database().ref('Ashara-Day-1-Raat-Majlis/').on('value',(snap)=>{
+    firebase.database().ref('Ashara-Day-2-Vaaz/').on('value',(snap)=>{
     var totalRecord =  snap.numChildren();
     console.log("Total Record : "+totalRecord);
    
