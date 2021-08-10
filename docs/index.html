@@ -183,7 +183,7 @@ $(document).ready(function(){
     console.log("error:"+error);
   } else {
     // Data saved successfully!
-    var checkbox = document.getElementById('rememberMe');
+    var checkbox = document.getElementById('rememberMe').checked;
     if(checkbox){
       localStorage.setItem("username", itsnum);
     }else if(!(checkbox) && localStorage.getItem("username")){
