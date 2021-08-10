@@ -169,12 +169,16 @@ user-select: none;
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
  var database = firebase.database()
-    var database = firebase.database();  
+    var database = firebase.database();
+    firebase.database().ref('Ashara/').on('value',(snap)=>{
+    var totalRecord =  snap.numChildren();
+    console.log("Total Record : "+totalRecord);
+   
     var totalRecord =  snapshot.numChildren();
     var totalRecordCount = document.getElementById('totalCount');
     
     var table = document.getElementById('itsdata');
-    snapshot.forEach(function(childSnapshot) {
+    snap.forEach(function(childSnapshot) {
       var childKey = childSnapshot.key;
       var childData = childSnapshot.val();
       totalRecordCount.innerHTML = "Total Records " + "for "+ childData.loginDay + " : " +totalRecord;
@@ -189,7 +193,7 @@ user-select: none;
       time.innerHTML = childData.loginTime;
       
     });
-    
+  });
    }
   }
   
