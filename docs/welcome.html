@@ -14,6 +14,23 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
 
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  </style>
   <style type="text/css">
   body{
    background-color: #009866;
@@ -75,6 +92,16 @@ user-select: none;
     </div>
   </div>
 </section>
+<table>
+  <tr><th id="totalCount" colspan="4" style="text-align: center;"></th></tr>
+  <tr>
+<th>Its Num</th>
+<th>Name</th>
+<th>Login Day</th>
+<th>Login Time</th>
+</tr>
+  <tbody id="itsdata"></tbody>
+</table>
 	<!-- <footer class="text-white body-font">
   
   <div class=""  style="background:#009866;">
@@ -123,9 +150,8 @@ user-select: none;
   {
    $("#wText").append("Welcome "+cv);
 
-   if(cv == "Burhan bhai Mulla Hamza bhai Bariyawala"){
+   if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala"){
     var credentials = JSON.parse(data)
-  console.log(credentials[0].measurementId)
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
@@ -141,12 +167,28 @@ user-select: none;
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
-  var database = firebase.database()
-    var database = firebase.database();
-    var starCountRef = firebase.database().ref('Ashara/');
-    starCountRef.on('value', (snapshot) => {
-    const data = snapshot.val();
-    console.log(data);
+ var database = firebase.database()
+    var database = firebase.database();  
+    var totalRecord =  snapshot.numChildren();
+    var totalRecordCount = document.getElementById('totalCount');
+    
+    var table = document.getElementById('itsdata');
+    snapshot.forEach(function(childSnapshot) {
+      var childKey = childSnapshot.key;
+      var childData = childSnapshot.val();
+      totalRecordCount.innerHTML = "Total Records " + "for "+ childData.loginDay + " : " +totalRecord;
+      let row = table.insertRow();
+      let its = row.insertCell(0);
+      its.innerHTML = childData.its;
+      let name = row.insertCell(1);
+      name.innerHTML = childData.user;
+      let day = row.insertCell(2);
+      day.innerHTML = childData.loginDay;
+      let time = row.insertCell(3);
+      time.innerHTML = childData.loginTime;
+      
+    });
+    
 });
    }
   }
