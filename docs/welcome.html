@@ -93,7 +93,8 @@ user-select: none;
   </div>
 </section>
 <div id="forAdmin" style="visibility: hidden; background-color: #fff;">
-<table>
+  <button class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 text-lg w-full" id="downloadData" onclick="exportData()">Export Data</button>
+  <table>
   <tr><th id="totalCount" colspan="4" style="text-align: center;"></th></tr>
   <tr>
 <th>Its Num</th>
@@ -200,6 +201,60 @@ user-select: none;
   }
   
 });
+function exportData(){
+    /* Get the HTML data using Element by Id */
+    var table = document.getElementById("itsdata");
+ 
+    /* Declaring array variable */
+    var rows =[];
+        column1 = "ITS Number";
+        column2 = "Username";
+        column3 = "Login Day";
+        column4 = "Login Time";
+        rows.push(
+            [
+                column1,
+                column2,
+                column3,
+                column4
+            ]
+        );
+      //iterate through rows of table
+    for(var i=0,row; row = table.rows[i];i++){
+        //rows would be accessed using the "row" variable assigned in the for loop
+        //Get each cell value/column from the row
+        column1 = row.cells[0].innerText;
+        column2 = row.cells[1].innerText;
+        column3 = row.cells[2].innerText;
+        column4 = row.cells[3].innerText;
+ 
+    /* add a new records in the array */
+        rows.push(
+            [
+                column1,
+                column2,
+                column3,
+                column4
+            ]
+        );
+ 
+        }
+        csvContent = "data:text/csv;charset=utf-8,";
+         /* add the column delimiter as comma(,) and each row splitted by new line character (\n) */
+        rows.forEach(function(rowArray){
+            row = rowArray.join(",");
+            csvContent += row + "\r\n";
+        });
+ 
+        /* create a hidden <a> DOM node and set its download attribute */
+        var encodedUri = encodeURI(csvContent);
+        var link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "Ashara Mubaraka 1443H.csv");
+        document.body.appendChild(link);
+        link.click();
+}
+
 </script>
 <script>
       window.oncontextmenu = function () {
