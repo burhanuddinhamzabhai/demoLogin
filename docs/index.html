@@ -61,7 +61,7 @@ user-select: none;
                 
               </div>
               <div class="mt-4 items-center flex justify-between">
-                <p class="px-4 py-1 text-center text-black font-medium w-full">Version 10.8.2021.9</p>
+                <p class="px-4 py-1 text-center text-black font-medium w-full">Version 10.8.2021.10</p>
               </div>
              <!-- <div class="flex items-center flex-wrap cursor-pointer bg-white rounded px-2 mt-5">
               <a class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0" href="sadaqallah.html">Click here for Sadaqallah
@@ -186,8 +186,8 @@ $(document).ready(function(){
     var checkbox = document.getElementById('rememberMe');
     if(checkbox){
       localStorage.setItem("username", itsnum);
-    }else if(localStorage.getItem("username")){
-      localStorage.removeItem(username);
+    }else if(!(checkbox) && localStorage.getItem("username")){
+      localStorage.removeItem("username");
     }
     console.log("data saved");
     window.location.href="welcome.html";
