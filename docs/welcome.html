@@ -172,7 +172,7 @@ user-select: none;
   firebase.analytics();
  var database = firebase.database()
     var database = firebase.database();
-    firebase.database().ref('Ashara/').on('value',(snap)=>{
+    firebase.database().ref('Ashara-Day-1-Raat-Majlis/').on('value',(snap)=>{
     var totalRecord =  snap.numChildren();
     console.log("Total Record : "+totalRecord);
    
@@ -183,7 +183,7 @@ user-select: none;
     snap.forEach(function(childSnapshot) {
       var childKey = childSnapshot.key;
       var childData = childSnapshot.val();
-      totalRecordCount.innerHTML = "Total Records " + "for "+ childData.loginDay + " : " +totalRecord;
+      totalRecordCount.innerHTML = "Total Records " + "for "+ childData.loginDay + " Raat Majlis : " +totalRecord;
       let row = table.insertRow();
       let its = row.insertCell(0);
       its.innerHTML = childData.its;
