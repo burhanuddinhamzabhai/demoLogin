@@ -45,23 +45,23 @@ user-select: none;
             <p class="text-2xl font-bold tracking-wide text-center">Welcome to Godhra Jamaat</p>
               <div class="">
                 <label class="block text-lg text-black font-bold" for="email">ITS No.</label>
-                <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white" style="border: 1px solid #2563EB;" type="text" id="itsno"  placeholder="ITS No."  required>
+                <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white" style="border: 1px solid #8a2900;" type="text" id="itsno"  placeholder="ITS No."  required>
               </div>
               <div class="mt-2">
                 <label class="block  text-lg text-black font-bold">Password</label>
-                 <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white" style="border: 1px solid #2563EB;" type="password" id="pass" placeholder="Password"  required>
+                 <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white" style="border: 1px solid #8a2900;" type="password" id="pass" placeholder="Password"  required>
               </div>
               <label class="inline-flex items-center mt-3">
                 <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" id="rememberMe" checked><span class="ml-2 text-lg font-semibold text-black">Remember Me</span>
             </label>
               <div class="mt-4 items-center flex justify-between">
                 <button class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg w-full"
-                  type="button" id="loginBtn">Login</button>
+                  type="button" id="loginBtn" style="background-color: #8a2900;">Login</button>
                
                 
               </div>
               <div class="mt-4 items-center flex justify-between">
-                <p class="px-4 py-1 text-center text-black font-medium w-full">Version 10.8.2021.18</p>
+                <p class="px-4 py-1 text-center text-black font-medium w-full">Version 11.8.2021.19</p>
               </div>
              <!-- <div class="flex items-center flex-wrap cursor-pointer bg-white rounded px-2 mt-5">
               <a class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0" href="sadaqallah.html">Click here for Sadaqallah
@@ -102,6 +102,7 @@ user-select: none;
 $(document).ready(function(){
 	window.history.replaceState('','','/');
   $('#loginBtn').click(function(){
+    document.getElementById('loginBtn').innerHTML="Logging In..."
   	var ino=itsno.value;
   	var pwd=pass.value;
     var flag=false;
