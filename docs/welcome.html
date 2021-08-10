@@ -123,7 +123,7 @@ user-select: none;
     </script>
 <script type="text/javascript">
  $(document).ready(function(){  
-	 window.history.replaceState('','','/');
+	 //window.history.replaceState('','','/');
   $("#logoutBtn").click(function(){
    document.cookie = "ITS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
    window.location.href="index.html";
@@ -152,7 +152,7 @@ user-select: none;
   {
    $("#wText").append("Welcome "+cv);
 
-   if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala" || cv == "Aliasgar bhai  Najmuddin bhai Saherwala"){
+   if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala" || cv == "Aliasgar bhai  Najmuddin bhai Saherwala "){
    document.getElementById('forAdmin').style.visibility = "visible";
     var credentials = JSON.parse(data)
   // Your web app's Firebase configuration
