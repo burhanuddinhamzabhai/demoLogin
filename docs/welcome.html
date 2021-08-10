@@ -87,13 +87,13 @@ user-select: none;
       <button >Logout</button>
 
     </div> -->
-          <header style="height: 60px; width:100%; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;">
-        <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
+          <header style="width:100%; padding: 5px; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;">
+        <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
             <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
                 </nav>
             <a
-                class="flex order-first lg:order-none w-3/5    title-font font-medium items-center lg:items-center lg:justify-center">
-                <span class="ml-3 text-xl"style="line-height:60px;"id="wText"></span>
+                class="flex order-first lg:order-none w-3/5 title-font font-medium items-center lg:items-center lg:justify-center">
+                <span class="ml-3 text-xl"style=""id="wText">Aliasgar bhai  Najmuddin bhai Saherwala</span>
             </a>
             <div class="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
                 <button class="text-white ml-4 py-2 px-3 rounded-lg" id="logoutBtn" style="background-color: #8a2900;">
@@ -102,21 +102,21 @@ user-select: none;
             </div>
         </div>
     </header>
-      <h1 class="mt-20 text-center text-blue-600 font-bold text-4xl sm\:text-2xl">Dawoodi Bohra Jamaat Godhra</h1>
-      <h1 class="text-center lg\:text-gray-700 font-medium text-2xl sm\:text-2xl">Ashara Mubaraka 1443H</h1>
+      <h1 class="mt-32 lg:mt-16 md:mt-16 sm:mt-16 text-center text-blue-600 font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
+      <h1 class=" text-center lg\:text-gray-700 font-medium text-2xl">Ashara Mubaraka 1443H</h1>
       
-      <div style="width: 70%; height: 40px; background-color: #eadfce;" class="mx-auto rounded mt-10">
-        <h1 class="ml-5 lg\:text-gray-800 font-medium text-lg" style="line-height: 40px;">Ashara Mubaraka 1443H Live Relay</h1>
+      <div style="height: 40px; background-color: #eadfce;" class="mx-auto rounded mt-10 w-10/12">
+        <h1 class="text-center lg:text-left lg:ml-5 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px;">Ashara Mubaraka 1443H Live Relay</h1>
       </div>
-      <div style="width: 70%; height: auto; padding: 30px 40px; background-color: #fff;
+      <div style="background-color: #fff;
       box-shadow:
       0 2.8px 2.2px rgba(0, 0, 0, 0.034),
       0 6.7px 5.3px rgba(0, 0, 0, 0.048),
       0 12.5px 10px rgba(0, 0, 0, 0.06),
       0 0px 0px rgba(0, 0, 0, 0.072),
       0 0px 0px rgba(0, 0, 0, 0.086),
-      0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10">
-      	<iframe scrolling src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" class=" object-cover object-center rounded" style="width: 100%; height: 60%;" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>  
+      0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 w-10/12 h-auto xl:h-auto px-3 py-3">
+      	<iframe scrolling src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>  
       </div>
       
 
@@ -184,13 +184,13 @@ user-select: none;
   }
   if(cv=="")
   {
-   window.location.href="index.html";
+   //window.location.href="index.html";
   }
   else
   {
    $("#wText").append(cv);
 
-   if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala" || cv == "Aliasgar bhai  Najmuddin bhai Saherwala "){
+   if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala" || cv == "Aliasgar bhai  Najmuddin bhai Saherwala"){
    document.getElementById('forAdmin').style.visibility = "visible";
     var credentials = JSON.parse(data)
   // Your web app's Firebase configuration
