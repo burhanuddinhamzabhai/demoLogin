@@ -7,24 +7,6 @@
   <meta name="author" content="Burhanuddin Hamzabhai">
 <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
-
-<style>
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
- }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-  </style>
   <style type="text/css">
   body{
     background-repeat: repeat;
@@ -76,11 +58,6 @@ user-select: none;
         <div></div>
     </div>
  <section class="content text-gray-600 body-font">
-   <!-- <div style="height: 60px; width:100%; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;"class="">
-      <h1 id="wText" class="sm:text-xl text-xl text-center font-semibold title-font text-gray-700 bg-black" style="line-height: 60px;">Burhanuddin Mulla Hamzabhai<span id="logoutBtn" class=" font-bold text-green-900 bg-white border-0 py-2 px-6 focus:outline-none hover:bg-green-600 hover:text-white rounded text-lg text-right">Logout</span></h1>
-      <button >Logout</button>
-
-    </div> -->
           <header style="width:100%; padding: 5px; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;">
         <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
             <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
@@ -113,40 +90,7 @@ user-select: none;
       	<iframe scrolling src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>  
       </div>
       
-
-   <!-- <div class="container mx-auto flex px-5 items-center justify-center flex-col align-middle h-screen mt-20">
-    
-    <div class="text-center lg:w-2/3 w-full">
-      <div class="flex justify-center">
-        <button id="logoutBtn" class="inline-flex font-bold text-green-900 bg-white mb-10 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 hover:text-white rounded text-lg">Logout</button>
-      </div>
-    </div>
-  </div> -->
 </section>
-<div id="forAdmin" style="visibility: hidden; background-color: #fff;">
-  <button class="text-white border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 text-lg w-full" id="downloadData" onclick="exportData()" style="background-color: #8a2900;">Export Data</button>
-  <table>
-  <tr><th id="totalCount" colspan="4" style="text-align: center;"></th></tr>
-  <tr>
-<th>Its Num</th>
-<th>Name</th>
-<th>Login Day</th>
-<th>Login Time</th>
-</tr>
-  <tbody id="itsdata"></tbody>
-</table>
-</div>
-	<!-- <footer class="text-white body-font">
-  
-  <div class=""  style="background:#009866;">
-    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-white text-sm text-center sm:text-left">Developed By —
-        <a href="http://dot53.in/websolutions.html" class="text-white ml-1" target="_blank" rel="noopener noreferrer">Dot53 Web Solutions</a>
-      </p>
-      <span class="sm:ml-auto sm:mt-0 mt-2 sm:w-auto w-full sm:text-left text-center text-white text-sm"><a href="https://burhanuddinhamzabhai.dev/">Burhanuddin Hamzabhai</a></span>
-    </div>
-  </div>
-</footer> -->
 <script>
         $(window).on('load',function(){
             $(".loader").fadeOut(1000);
@@ -183,131 +127,10 @@ user-select: none;
   else
   {
    $("#wText").append(cv);
-  //  function getParameterByName(name, url) {
-  //           if (!url) url = window.location.href;
-  //           name = name.replace(/[\[\]]/g, "\\$&");
-  //           var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-  //               results = regex.exec(url);
-  //           if (!results) return null;
-  //           if (!results[2]) return '';
-  //           return decodeURIComponent(results[2].replace(/\+/g, " "));
-  //       }
-  //       // Give the parameter a variable name
-  //       var dynamicContent = getParameterByName('admin');
-     
-  //        document.addEventListener("DOMContentLoaded", (event) => {
-    
-  //           if (dynamicContent == "admin" && cv == "Burhan bhai Mulla Hamza bhai Bariyawala") {
-                 
-  //           } else if (cv == "Burhan bhai Mulla Hamza bhai Bariyawala") {
-  //             window.location.href="admin.html";
-  //           }
-  //       }); 
-   //if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala" || cv == "Aliasgar bhai  Najmuddin bhai Saherwala"){
-//    document.getElementById('forAdmin').style.visibility = "visible";
-//     var credentials = JSON.parse(data)
-//   // Your web app's Firebase configuration
-//   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-//   const firebaseConfig = {
-//   apiKey: credentials[0].apiKey,
-//   authDomain: credentials[0].authDomain,
-//   databaseURL: credentials[0].databaseURL,
-//   projectId: credentials[0].projectId,
-//   storageBucket: credentials[0].storageBucket,
-//   messagingSenderId: credentials[0].messagingSenderId,
-//   appId: credentials[0].appId,
-//   measurementId: credentials[0].measurementId
-// };
-  // Initialize Firebase
-//   firebase.initializeApp(firebaseConfig);
-//   firebase.analytics();
-//  var database = firebase.database()
-//     var database = firebase.database();
-//     firebase.database().ref('Ashara-Day-2-Vaaz/').on('value',(snap)=>{
-//     var totalRecord =  snap.numChildren();
-//     console.log("Total Record : "+totalRecord);
-   
-//     var totalRecord =  snap.numChildren();
-//     var totalRecordCount = document.getElementById('totalCount');
-    
-//     var table = document.getElementById('itsdata');
-//     snap.forEach(function(childSnapshot) {
-//       var childKey = childSnapshot.key;
-//       var childData = childSnapshot.val();
-//       totalRecordCount.innerHTML = "Total Records for Day 2 Vaaz : " +totalRecord;
-//       let row = table.insertRow();
-//       let its = row.insertCell(0);
-//       its.innerHTML = childData.its;
-//       let name = row.insertCell(1);
-//       name.innerHTML = childData.user;
-//       let day = row.insertCell(2);
-//       day.innerHTML = childData.loginDay;
-//       let time = row.insertCell(3);
-//       time.innerHTML = childData.loginTime;
-      
-//     });
-//   });
-//    }
   }
   
  });
- // Parse the URL parameter
-
-// function exportData(){
-//     /* Get the HTML data using Element by Id */
-//     var table = document.getElementById("itsdata");
- 
-//     /* Declaring array variable */
-//     var rows =[];
-//         column1 = "ITS Number";
-//         column2 = "Username";
-//         column3 = "Login Day";
-//         column4 = "Login Time";
-//         rows.push(
-//             [
-//                 column1,
-//                 column2,
-//                 column3,
-//                 column4
-//             ]
-//         );
-//       //iterate through rows of table
-//     for(var i=0,row; row = table.rows[i];i++){
-//         //rows would be accessed using the "row" variable assigned in the for loop
-//         //Get each cell value/column from the row
-//         column1 = row.cells[0].innerText;
-//         column2 = row.cells[1].innerText;
-//         column3 = row.cells[2].innerText;
-//         column4 = row.cells[3].innerText;
- 
-//     /* add a new records in the array */
-//         rows.push(
-//             [
-//                 column1,
-//                 column2,
-//                 column3,
-//                 column4
-//             ]
-//         );
- 
-//         }
-//         csvContent = "data:text/csv;charset=utf-8,";
-//          /* add the column delimiter as comma(,) and each row splitted by new line character (\n) */
-//         rows.forEach(function(rowArray){
-//             row = rowArray.join(",");
-//             csvContent += row + "\r\n";
-//         });
- 
-//         /* create a hidden <a> DOM node and set its download attribute */
-//         var encodedUri = encodeURI(csvContent);
-//         var link = document.createElement("a");
-//         link.setAttribute("href", encodedUri);
-//         link.setAttribute("download", "Ashara Mubaraka 1443H.csv");
-//         document.body.appendChild(link);
-//         link.click();
-// }
-
-// </script>
+ </script>
 <script>
       window.oncontextmenu = function () {
             return false;

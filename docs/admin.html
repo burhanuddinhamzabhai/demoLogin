@@ -66,7 +66,7 @@
                 </a>
     
                 <a class="flex items-center mt-4 py-2 px-6 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
-                    href="welcome.html?admin=true">
+                    href="welcome.html">
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -353,11 +353,11 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
- var database = firebase.database()
     var database = firebase.database();
-    
+    var childRef = data.path;
   window.onload = function() {
-    firebase.database().ref('Ashara-Day-2-Raat-Majlis/').on('value',(snap)=>{
+      
+    firebase.database().ref(childRef).on('value',(snap)=>{
     var totalRecord =  snap.numChildren();
     console.log("Total Record : "+totalRecord);
    
@@ -371,7 +371,7 @@
       document.getElementById('viewRecords').innerHTML = "View Current Records";
       fillAllRecords();
   }else{
-  firebase.database().ref('Ashara-Day-2-Raat-Majlis/').once('value',(snap)=>{
+  firebase.database().ref(childRef).once('value',(snap)=>{
   var table = document.getElementById('itsdata');
     snap.forEach(function(childSnapshot) {
       var childKey = childSnapshot.key;
