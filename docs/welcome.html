@@ -189,122 +189,122 @@ user-select: none;
   else
   {
    $("#wText").append(cv);
-
-   if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala" || cv == "Aliasgar bhai  Najmuddin bhai Saherwala"){
-   document.getElementById('forAdmin').style.visibility = "visible";
-    var credentials = JSON.parse(data)
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-  apiKey: credentials[0].apiKey,
-  authDomain: credentials[0].authDomain,
-  databaseURL: credentials[0].databaseURL,
-  projectId: credentials[0].projectId,
-  storageBucket: credentials[0].storageBucket,
-  messagingSenderId: credentials[0].messagingSenderId,
-  appId: credentials[0].appId,
-  measurementId: credentials[0].measurementId
-};
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
- var database = firebase.database()
-    var database = firebase.database();
-    firebase.database().ref('Ashara-Day-2-Vaaz/').on('value',(snap)=>{
-    var totalRecord =  snap.numChildren();
-    console.log("Total Record : "+totalRecord);
-   
-    var totalRecord =  snap.numChildren();
-    var totalRecordCount = document.getElementById('totalCount');
-    
-    var table = document.getElementById('itsdata');
-    snap.forEach(function(childSnapshot) {
-      var childKey = childSnapshot.key;
-      var childData = childSnapshot.val();
-      totalRecordCount.innerHTML = "Total Records for Day 2 Vaaz : " +totalRecord;
-      let row = table.insertRow();
-      let its = row.insertCell(0);
-      its.innerHTML = childData.its;
-      let name = row.insertCell(1);
-      name.innerHTML = childData.user;
-      let day = row.insertCell(2);
-      day.innerHTML = childData.loginDay;
-      let time = row.insertCell(3);
-      time.innerHTML = childData.loginTime;
-      
-    });
-  });
-   }
   }
+   //if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala" || cv == "Aliasgar bhai  Najmuddin bhai Saherwala"){
+//    document.getElementById('forAdmin').style.visibility = "visible";
+//     var credentials = JSON.parse(data)
+//   // Your web app's Firebase configuration
+//   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+//   const firebaseConfig = {
+//   apiKey: credentials[0].apiKey,
+//   authDomain: credentials[0].authDomain,
+//   databaseURL: credentials[0].databaseURL,
+//   projectId: credentials[0].projectId,
+//   storageBucket: credentials[0].storageBucket,
+//   messagingSenderId: credentials[0].messagingSenderId,
+//   appId: credentials[0].appId,
+//   measurementId: credentials[0].measurementId
+// };
+//   // Initialize Firebase
+//   firebase.initializeApp(firebaseConfig);
+//   firebase.analytics();
+//  var database = firebase.database()
+//     var database = firebase.database();
+//     firebase.database().ref('Ashara-Day-2-Vaaz/').on('value',(snap)=>{
+//     var totalRecord =  snap.numChildren();
+//     console.log("Total Record : "+totalRecord);
+   
+//     var totalRecord =  snap.numChildren();
+//     var totalRecordCount = document.getElementById('totalCount');
+    
+//     var table = document.getElementById('itsdata');
+//     snap.forEach(function(childSnapshot) {
+//       var childKey = childSnapshot.key;
+//       var childData = childSnapshot.val();
+//       totalRecordCount.innerHTML = "Total Records for Day 2 Vaaz : " +totalRecord;
+//       let row = table.insertRow();
+//       let its = row.insertCell(0);
+//       its.innerHTML = childData.its;
+//       let name = row.insertCell(1);
+//       name.innerHTML = childData.user;
+//       let day = row.insertCell(2);
+//       day.innerHTML = childData.loginDay;
+//       let time = row.insertCell(3);
+//       time.innerHTML = childData.loginTime;
+      
+//     });
+//   });
+//    }
+//   }
   
-});
-function exportData(){
-    /* Get the HTML data using Element by Id */
-    var table = document.getElementById("itsdata");
+// });
+// function exportData(){
+//     /* Get the HTML data using Element by Id */
+//     var table = document.getElementById("itsdata");
  
-    /* Declaring array variable */
-    var rows =[];
-        column1 = "ITS Number";
-        column2 = "Username";
-        column3 = "Login Day";
-        column4 = "Login Time";
-        rows.push(
-            [
-                column1,
-                column2,
-                column3,
-                column4
-            ]
-        );
-      //iterate through rows of table
-    for(var i=0,row; row = table.rows[i];i++){
-        //rows would be accessed using the "row" variable assigned in the for loop
-        //Get each cell value/column from the row
-        column1 = row.cells[0].innerText;
-        column2 = row.cells[1].innerText;
-        column3 = row.cells[2].innerText;
-        column4 = row.cells[3].innerText;
+//     /* Declaring array variable */
+//     var rows =[];
+//         column1 = "ITS Number";
+//         column2 = "Username";
+//         column3 = "Login Day";
+//         column4 = "Login Time";
+//         rows.push(
+//             [
+//                 column1,
+//                 column2,
+//                 column3,
+//                 column4
+//             ]
+//         );
+//       //iterate through rows of table
+//     for(var i=0,row; row = table.rows[i];i++){
+//         //rows would be accessed using the "row" variable assigned in the for loop
+//         //Get each cell value/column from the row
+//         column1 = row.cells[0].innerText;
+//         column2 = row.cells[1].innerText;
+//         column3 = row.cells[2].innerText;
+//         column4 = row.cells[3].innerText;
  
-    /* add a new records in the array */
-        rows.push(
-            [
-                column1,
-                column2,
-                column3,
-                column4
-            ]
-        );
+//     /* add a new records in the array */
+//         rows.push(
+//             [
+//                 column1,
+//                 column2,
+//                 column3,
+//                 column4
+//             ]
+//         );
  
-        }
-        csvContent = "data:text/csv;charset=utf-8,";
-         /* add the column delimiter as comma(,) and each row splitted by new line character (\n) */
-        rows.forEach(function(rowArray){
-            row = rowArray.join(",");
-            csvContent += row + "\r\n";
-        });
+//         }
+//         csvContent = "data:text/csv;charset=utf-8,";
+//          /* add the column delimiter as comma(,) and each row splitted by new line character (\n) */
+//         rows.forEach(function(rowArray){
+//             row = rowArray.join(",");
+//             csvContent += row + "\r\n";
+//         });
  
-        /* create a hidden <a> DOM node and set its download attribute */
-        var encodedUri = encodeURI(csvContent);
-        var link = document.createElement("a");
-        link.setAttribute("href", encodedUri);
-        link.setAttribute("download", "Ashara Mubaraka 1443H.csv");
-        document.body.appendChild(link);
-        link.click();
-}
+//         /* create a hidden <a> DOM node and set its download attribute */
+//         var encodedUri = encodeURI(csvContent);
+//         var link = document.createElement("a");
+//         link.setAttribute("href", encodedUri);
+//         link.setAttribute("download", "Ashara Mubaraka 1443H.csv");
+//         document.body.appendChild(link);
+//         link.click();
+// }
 
-</script>
-<script>
-      window.oncontextmenu = function () {
-            return false;
-        }
-        $(document).keydown(function (event) {
-            if (event.keyCode == 123) {
-                return false;
-            }
-            else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-                return false;
-            }
-        });  
+// </script>
+// <script>
+//       window.oncontextmenu = function () {
+//             return false;
+//         }
+//         $(document).keydown(function (event) {
+//             if (event.keyCode == 123) {
+//                 return false;
+//             }
+//             else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+//                 return false;
+//             }
+//         });  
 </script>
 </body>
 </html>
