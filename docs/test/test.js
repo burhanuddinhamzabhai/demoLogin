@@ -15653,7 +15653,8 @@
         },
         {
             "ITS_ID": "60460544",
-            "Full_Name": "Burhan bhai Mulla Hamza bhai Bariyawala"
+            "Full_Name": "Burhan bhai Mulla Hamza bhai Bariyawala",
+            "Admin": "True"
         },
         {
             "ITS_ID": "60466185",

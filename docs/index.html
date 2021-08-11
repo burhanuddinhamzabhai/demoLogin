@@ -114,7 +114,7 @@ $(document).ready(function(){
     $.getJSON("/test/test.js", function(result){
 
       $.each(result, function(i, field){
-        console.log(field)
+        
       		if(ino==field.ITS_ID && pwd==field.ITS_ID)
       		{
             flag=true;
@@ -123,7 +123,11 @@ $(document).ready(function(){
   				d.setTime(d.getTime() + (24*60*60*1000));
   				var expires = "expires="+ d.toUTCString();
   				document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
-      			
+            
+            if(field.Admin == "True"){
+              window.location.href="admin.html"
+            }
+
             itsnum = field.ITS_ID;
             username= field.Full_Name;
             addUser();

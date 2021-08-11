@@ -153,9 +153,6 @@ user-select: none;
             $(".content").fadeIn(1000);
         });
     </script>
-    <script type="text/javascript">
-      
-    </script>
 <script type="text/javascript">
  $(document).ready(function(){  
 	 //window.history.replaceState('','','/');
@@ -186,26 +183,26 @@ user-select: none;
   else
   {
    $("#wText").append(cv);
-   function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-        // Give the parameter a variable name
-        var dynamicContent = getParameterByName('admin');
+  //  function getParameterByName(name, url) {
+  //           if (!url) url = window.location.href;
+  //           name = name.replace(/[\[\]]/g, "\\$&");
+  //           var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+  //               results = regex.exec(url);
+  //           if (!results) return null;
+  //           if (!results[2]) return '';
+  //           return decodeURIComponent(results[2].replace(/\+/g, " "));
+  //       }
+  //       // Give the parameter a variable name
+  //       var dynamicContent = getParameterByName('admin');
      
-         document.addEventListener("DOMContentLoaded", (event) => {
+  //        document.addEventListener("DOMContentLoaded", (event) => {
     
-            if (dynamicContent == "admin" && cv == "Burhan bhai Mulla Hamza bhai Bariyawala") {
+  //           if (dynamicContent == "admin" && cv == "Burhan bhai Mulla Hamza bhai Bariyawala") {
                  
-            } else if (cv == "Burhan bhai Mulla Hamza bhai Bariyawala") {
-              window.location.href="admin.html";
-            }
-        }); 
+  //           } else if (cv == "Burhan bhai Mulla Hamza bhai Bariyawala") {
+  //             window.location.href="admin.html";
+  //           }
+  //       }); 
    //if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala" || cv == "Aliasgar bhai  Najmuddin bhai Saherwala"){
 //    document.getElementById('forAdmin').style.visibility = "visible";
 //     var credentials = JSON.parse(data)
