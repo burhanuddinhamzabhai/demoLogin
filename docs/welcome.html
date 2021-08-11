@@ -6,13 +6,7 @@
   <title>Godhra Jamaat</title>
   <meta name="author" content="Burhanuddin Hamzabhai">
 <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-<script type="text/javascript" src="test/credentials.json"></script>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+
 
 <style>
   table {
@@ -189,7 +183,9 @@ user-select: none;
   else
   {
    $("#wText").append(cv);
-  
+   if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala" || cv == "Aliasgar bhai  Najmuddin bhai Saherwala"){
+    window.location.href="admin.html";
+   }
    //if(cv == "Husain bhai  Saifuddin bhai Bhikhapurwala" || cv == "Aliasgar bhai  Najmuddin bhai Saherwala"){
 //    document.getElementById('forAdmin').style.visibility = "visible";
 //     var credentials = JSON.parse(data)
@@ -293,18 +289,18 @@ user-select: none;
 // }
 
 // </script>
-// <script>
-//       window.oncontextmenu = function () {
-//             return false;
-//         }
-//         $(document).keydown(function (event) {
-//             if (event.keyCode == 123) {
-//                 return false;
-//             }
-//             else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-//                 return false;
-//             }
-//         });  
+<script>
+      window.oncontextmenu = function () {
+            return false;
+        }
+        $(document).keydown(function (event) {
+            if (event.keyCode == 123) {
+                return false;
+            }
+            else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+                return false;
+            }
+        });  
 </script>
 </body>
 </html>
