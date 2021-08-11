@@ -30,9 +30,17 @@
     tr:nth-child(even) {
       background-color: #E5E7EB;
     }
+    html{
+  -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
     </style>
 </head>
-<body class="bg-gray-200">
+<body class="bg-gray-200" oncontextmenu="return false">
     
     <div>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -463,6 +471,19 @@ function logout(){
     document.cookie = "ITS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
    window.location.href="index.html";
 }
+</script>
+<script>
+    window.oncontextmenu = function () {
+          return false;
+      }
+      $(document).keydown(function (event) {
+          if (event.keyCode == 123) {
+              return false;
+          }
+          else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+              return false;
+          }
+      });  
 </script>
 </body>
 </html>
