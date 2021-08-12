@@ -10,8 +10,9 @@
   <style type="text/css">
   body{
     background-repeat: repeat;
-    background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url("bg.jpg");
-     
+    /* background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url("bg.jpg"); */
+     /* Ashara Theme */
+    background: url(AsharaBG.jpg) repeat center center fixed;
 }
 
 html{
@@ -29,7 +30,8 @@ user-select: none;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    background-color: #f1eee9;
+    /* background-color: #f1eee9; */
+    background-color: #062f07;
     position: absolute;
 }
 .loader>div{
@@ -58,7 +60,24 @@ user-select: none;
         <div></div>
     </div>
  <section class="content text-gray-600 body-font">
-          <header style="width:100%; padding: 5px; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;">
+     <!-- ashara-nav -->
+     <header style="width:100%; padding: 5px; top:0; background:#062f07 url(motif-design.png) repeat-x bottom; box-shadow: 0 3px 10px -6px #777;position: fixed;">
+        <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
+            <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
+                </nav>
+            <a
+                class="flex order-first lg:order-none w-3/5 title-font font-medium items-center lg:items-center lg:justify-center">
+                <span class="ml-3 text-xl text-white"style=""id="wText"></span>
+            </a>
+            <div class="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+                <button class="text-white ml-4 py-2 px-3 rounded-lg" id="logoutBtn" style="background-color: #8a2900;">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- ends -->
+          <!-- <header style="width:100%; padding: 5px; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;">
         <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
             <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
                 </nav>
@@ -72,8 +91,37 @@ user-select: none;
                 </button>
             </div>
         </div>
-    </header>
-      <h1 class="mt-32 lg:mt-16 md:mt-16 sm:mt-16 text-center text-blue-600 font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
+    </header> -->
+    <!-- ashara bg -->
+    <div class="mt-20 lg:mt-16 md:mt-16 sm:mt-16 max-w-screen mx-auto" style="border-bottom: 2px solid #7f1801;">
+        <picture class="mx-auto">
+            <source class="mx-auto" media="(max-width: 799px)" srcset="Ashara_1443_Green_Small.png">
+            <source class="mx-auto" media="(min-width: 800px)" srcset="Ashara_1443_Green.png">
+            <img class="mx-auto" src="Ashara_1443_Green.png" alt="Chris standing up holding his daughter Elva">
+          </picture>
+    <!-- <img loading=lazy src="Ashara_1443_Green_Small.png" srcset="Ashara_1443_Green_Small.png,
+                                            Ashara_1443_Green.png 2x" style="width: auto; height: auto;" class="mx-auto" alt=""> -->
+</div>
+
+<h1 class="mt-16 lg:mt-16 md:mt-16 sm:mt-16 text-center text-white font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
+<h1 class=" text-center text-white font-medium text-2xl">Ashara Mubaraka 1443H</h1>
+
+<div style="background-color: #fefbf5;
+box-shadow:
+0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+0 12.5px 10px rgba(0, 0, 0, 0.06),
+0 0px 0px rgba(0, 0, 0, 0.072),
+0 0px 0px rgba(0, 0, 0, 0.086),
+0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 mt-20 w-10/12 h-auto xl:h-auto px-3 py-3">
+
+<h1 class="text-center lg:text-left lg:ml-2 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px; color:#7f1801;">Ashara Mubaraka 1443H Live Relay</h1>
+    <iframe loading="lazy" id="my-deferred-iframe" scrolling src="" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay"></iframe>  
+</div>
+
+
+
+      <!-- <h1 class="mt-32 lg:mt-16 md:mt-16 sm:mt-16 text-center text-blue-600 font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
       <h1 class=" text-center lg\:text-gray-700 font-medium text-2xl">Ashara Mubaraka 1443H</h1>
       
       <div style="height: 40px; background-color: #eadfce;" class="mx-auto rounded mt-10 w-10/12">
@@ -87,14 +135,17 @@ user-select: none;
       0 0px 0px rgba(0, 0, 0, 0.072),
       0 0px 0px rgba(0, 0, 0, 0.086),
       0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 w-10/12 h-auto xl:h-auto px-3 py-3">
-      	<iframe scrolling src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>  
+      	<iframe loading=lazy scrolling src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>   
       </div>
-      
+       -->
+
 </section>
+
+</div>
 <script>
         $(window).on('load',function(){
-            $(".loader").fadeOut(1000);
-            $(".content").fadeIn(1000);
+            $(".loader").fadeOut(500);
+            $(".content").fadeIn(500);
         });
     </script>
 <script type="text/javascript">
@@ -130,6 +181,11 @@ user-select: none;
   }
   
  });
+ function loadDeferredIframe() {
+        var iframe = document.getElementById("my-deferred-iframe");
+        iframe.src = "https://account3.livebox.co.in/livebox/player/?chnl=dawoodi"
+    };
+    window.onload = loadDeferredIframe;
  </script>
 <script>
       window.oncontextmenu = function () {
