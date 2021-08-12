@@ -61,8 +61,8 @@ user-select: none;
     </div>
  <section class="content text-gray-600 body-font">
      <!-- ashara-nav -->
-     <header style="width:100%; padding: 5px; top:0; background:#062f07 url(motif-design.png) repeat-x bottom; box-shadow: 0 3px 10px -6px #777;position: fixed;">
-        <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
+     <header class="h-16 " style="width:100%; padding: 5px; top:0; background:#062f07 url(motif-design.png) repeat-x bottom; box-shadow: 0 3px 10px -6px #777;position: fixed;">
+        <!-- <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
             <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
                 </nav>
             <a
@@ -74,8 +74,9 @@ user-select: none;
                     Logout
                 </button>
             </div>
-        </div>
+        </div> -->
     </header>
+
     <!-- ends -->
           <!-- <header style="width:100%; padding: 5px; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;">
         <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
@@ -102,6 +103,9 @@ user-select: none;
     <!-- <img loading=lazy src="Ashara_1443_Green_Small.png" srcset="Ashara_1443_Green_Small.png,
                                             Ashara_1443_Green.png 2x" style="width: auto; height: auto;" class="mx-auto" alt=""> -->
 </div>
+<div class="h-16 -mt-5" style="width:100%; background:#062f07 url(Ashara-motif.jpg) repeat-x bottom;"></div>
+<h1 class=" text-center text-white font-medium text-2xl mt-5" id="wText"></h1>
+
 
 <h1 class="mt-16 lg:mt-16 md:mt-16 sm:mt-16 text-center text-white font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
 <h1 class=" text-center text-white font-medium text-2xl">Ashara Mubaraka 1443H</h1>
@@ -140,8 +144,13 @@ box-shadow:
        -->
 
 </section>
+<div class="p-2 w-full mb-10">
+    <button class="flex mx-auto border-0 py-2 px-8 focus:outline-none text-white rounded text-lg" id="logoutBtn" style="background-color: #8a2900;">Logout</button>
+  </div>
 
 </div>
+<div class="h-16" style="width:100%; background:#062f07 url(motif-design.png) repeat-x bottom;"></div>
+
 <script>
         $(window).on('load',function(){
             $(".loader").fadeOut(500);
@@ -173,7 +182,7 @@ box-shadow:
   }
   if(cv=="")
   {
-   window.location.href="index.html";
+   //window.location.href="index.html";
   }
   else
   {
