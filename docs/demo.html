@@ -1,0 +1,251 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Godhra Jamaat</title>
+  <meta name="author" content="Burhanuddin Hamzabhai">
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<script type=text/javascript" src="//domain.com/videojs/video.min.js"></script>
+<script type=text/javascript" src="//domain.com/videojs/nuevo.min.js"></script>
+
+  <style type="text/css">
+  body{
+    background-repeat: repeat;
+    /* background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url("bg.jpg"); */
+     /* Ashara Theme */
+    background: url(AsharaBG.jpg) repeat center center fixed;
+}
+
+html{
+  -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+.content{
+    display: none;
+}
+.loader{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* background-color: #f1eee9; */
+    background-color: #062f07;
+    position: absolute;
+}
+.loader>div{
+    height: 100px;
+    width: 100px;
+    border: 15px solid #fff;
+    border-top-color: #8a2900;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+</style>
+</head>
+<body oncontextmenu="return false">
+  <div class="loader">
+        <div></div>
+    </div>
+ <section class="content text-gray-600 body-font">
+     <!-- ashara-nav -->
+     <header class="h-16 " style="width:100%; padding: 5px; top:0; background:#062f07 url(motif-design.png) repeat-x bottom; box-shadow: 0 3px 10px -6px #777;position: fixed;">
+        <!-- <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
+            <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
+                </nav>
+            <a
+                class="flex order-first lg:order-none w-3/5 title-font font-medium items-center lg:items-center lg:justify-center">
+                <span class="ml-3 text-xl text-white"style=""id="wText"></span>
+            </a>
+            <div class="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+                <button class="text-white ml-4 py-2 px-3 rounded-lg" id="logoutBtn" style="background-color: #8a2900;">
+                    Logout
+                </button>
+            </div>
+        </div> -->
+    </header>
+
+    <!-- ends -->
+          <!-- <header style="width:100%; padding: 5px; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;">
+        <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
+            <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
+                </nav>
+            <a
+                class="flex order-first lg:order-none w-3/5 title-font font-medium items-center lg:items-center lg:justify-center">
+                <span class="ml-3 text-xl"style=""id="wText"></span>
+            </a>
+            <div class="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+                <button class="text-white ml-4 py-2 px-3 rounded-lg" id="logoutBtn" style="background-color: #8a2900;">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </header> -->
+    <!-- ashara bg -->
+    <div class="mt-20 lg:mt-16 md:mt-16 sm:mt-16 max-w-screen mx-auto" style="border-bottom: 2px solid #7f1801;">
+        <picture class="mx-auto">
+            <source class="mx-auto" media="(max-width: 799px)" srcset="Ashara_1443_Green_Small.png">
+            <source class="mx-auto" media="(min-width: 800px)" srcset="Ashara_1443_Green.png">
+            <img class="mx-auto" src="Ashara_1443_Green.png" alt="Chris standing up holding his daughter Elva">
+          </picture>
+    <!-- <img loading=lazy src="Ashara_1443_Green_Small.png" srcset="Ashara_1443_Green_Small.png,
+                                            Ashara_1443_Green.png 2x" style="width: auto; height: auto;" class="mx-auto" alt=""> -->
+</div>
+<div class="h-16 -mt-5" style="width:100%; background:#062f07 url(Ashara-motif.jpg) repeat-x bottom;"></div>
+<h1 class=" text-center text-white font-medium text-2xl mt-5" id="wText"></h1>
+
+
+<h1 class="mt-16 lg:mt-16 md:mt-16 sm:mt-16 text-center text-white font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
+<h1 class=" text-center text-white font-medium text-2xl">Ashara Mubaraka 1443H</h1>
+
+<div style="background-color: #fefbf5;
+box-shadow:
+0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+0 12.5px 10px rgba(0, 0, 0, 0.06),
+0 0px 0px rgba(0, 0, 0, 0.072),
+0 0px 0px rgba(0, 0, 0, 0.086),
+0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 mt-20 w-10/12 h-auto xl:h-auto px-3 py-3">
+
+<h1 class="text-center lg:text-left lg:ml-2 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px; color:#7f1801;">Ashara Mubaraka 1443H Live Relay</h1>
+<!-- <video tabindex="-1" class="video-stream html5-main-video" data-no-fullscreen="true" webkit-playsinline="" playsinline="" controlslist="nodownload" style="width: 500px; height: 500px; left: 0px; top: 0px;" src="blob:https://account3.livebox.co.in/livebox/player/?chnl=dawoodi"></video> -->
+
+    <!-- <iframe loading="lazy" id="my-deferred-iframe" scrolling src="" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay"></iframe>   -->
+</div>
+
+
+
+      <!-- <h1 class="mt-32 lg:mt-16 md:mt-16 sm:mt-16 text-center text-blue-600 font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
+      <h1 class=" text-center lg\:text-gray-700 font-medium text-2xl">Ashara Mubaraka 1443H</h1>
+      
+      <div style="height: 40px; background-color: #eadfce;" class="mx-auto rounded mt-10 w-10/12">
+        <h1 class="text-center lg:text-left lg:ml-5 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px;">Ashara Mubaraka 1443H Live Relay</h1>
+      </div>
+      <div style="background-color: #fff;
+      box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 0px 0px rgba(0, 0, 0, 0.072),
+      0 0px 0px rgba(0, 0, 0, 0.086),
+      0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 w-10/12 h-auto xl:h-auto px-3 py-3">
+      	<iframe loading=lazy scrolling src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>   
+      </div>
+       -->
+
+</section>
+<video-js id=vid1 width=600 height=300 class="vjs-default-skin" controls>
+    <source
+       src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi"
+       type="application/x-mpegURL">
+  </video-js>
+<video id="myplayer" class="video-js vjs-fluid" poster="" controls preload="auto">
+    <source src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" type="application/x-mpegURL">
+  </video>
+<!-- <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    data-setup="{}"
+  >
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video> -->
+
+<div class="p-2 w-full mb-10">
+    <button class="flex mx-auto border-0 py-2 px-8 focus:outline-none text-white rounded text-lg" id="logoutBtn" style="background-color: #8a2900;">Logout</button>
+  </div>
+
+</div>
+<div class="h-16" style="width:100%; background:#062f07 url(motif-design.png) repeat-x bottom;"></div>
+
+<script>
+        $(window).on('load',function(){
+            $(".loader").fadeOut(500);
+            $(".content").fadeIn(500);
+        });
+        
+    </script>
+<script src="video.js"></script>
+<script src="videojs-http-streaming.min.js"></script>
+<script>
+var player = videojs('vid1');
+player.play();
+</script>
+<script type="text/javascript">
+ $(document).ready(function(){  
+	 //window.history.replaceState('','','/');
+  $("#logoutBtn").click(function(){
+   document.cookie = "ITS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+   window.location.href="index.html";
+  });
+
+  var d=document.cookie;
+  var name = "ITS=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  var cv="";
+  for(var i = 0; i <ca.length; i++) {
+   var c = ca[i];
+   while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      cv=c.substring(name.length, c.length);
+      break;
+    }
+  }
+  if(cv=="")
+  {
+   //window.location.href="index.html";
+  }
+  else
+  {
+   $("#wText").append(cv);
+  }
+  
+ });
+ function loadDeferredIframe() {
+        // var iframe = document.getElementById("my-deferred-iframe");
+        // iframe.src = "https://account3.livebox.co.in/livebox/player/?chnl=dawoodi"
+    };
+    window.onload = loadDeferredIframe;
+ </script>
+<script>
+      window.oncontextmenu = function () {
+            return false;
+        }
+        $(document).keydown(function (event) {
+            if (event.keyCode == 123) {
+                return false;
+            }
+            else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+                return false;
+            }
+        });  
+</script>
+</body>
+</html>
+
