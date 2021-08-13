@@ -172,6 +172,13 @@ box-shadow:
         scrollTop: $("#mainDiv").offset().top
     }, 2000);
 });
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    // Do something
+    $('html, body').animate({
+        scrollTop: $("#mainDiv").offset().top
+    }, 2000);
+});
     </script>
 <script type="text/javascript">
  $(document).ready(function(){  
@@ -198,7 +205,7 @@ box-shadow:
   }
   if(cv=="")
   {
-   window.location.href="index.html";
+   //window.location.href="index.html";
   }
   else
   {
