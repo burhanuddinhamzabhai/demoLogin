@@ -15,11 +15,26 @@
     background: url(AsharaBG.jpg) repeat center center fixed;
 }
 
+.btn:hover{
+background-color: #fefbf5;
+color: #8a2900;
+transition: 0.3s;
+}
+.btn{
+    background-color: #8a2900;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.active{
+    background-color: #fefbf5;
+color: #8a2900;
+transition: 0.3s;
+}
 #logoutBtn:hover{
 background-color: #fefbf5;
 color: #8a2900;
-border-bottom: 6px solid #8a2900;
 transition: 0.3s;
+border-bottom: 6px solid #8a2900;
 }
 #logoutBtn{
     background-color: #8a2900;
@@ -122,6 +137,12 @@ user-select: none;
 <h1 class="mt-16 lg:mt-16 md:mt-16 sm:mt-16 text-center text-white font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
 <h1 class=" text-center text-white font-medium text-2xl">Ashara Mubaraka 1443H</h1>
 
+<div class="mx-auto mt-10 flex flex-wrap md:flex-row items-center" style="width: 70%;">
+    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn active" id="sBtn1" onclick="watchOne()">Server 1</button>
+    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn2" onclick="watchTwo()">Server 2</button>
+    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn3" onclick="watchThree()">Server 3</button>
+</div>
+
 <div style="background-color: #fefbf5;
 box-shadow:
 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -129,11 +150,16 @@ box-shadow:
 0 12.5px 10px rgba(0, 0, 0, 0.06),
 0 0px 0px rgba(0, 0, 0, 0.072),
 0 0px 0px rgba(0, 0, 0, 0.086),
-0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 mt-20 w-10/12 h-auto xl:h-auto px-3 py-3" id="mainDiv">
+0 0px 0px rgba(0, 0, 0, 0.12); width: 80%;" class="mx-auto rounded mb-10 mt-8 h-auto xl:h-auto px-3 py-3" id="mainDiv">
 
 <h1 class="text-center lg:text-left lg:ml-2 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px; color:#7f1801;">Ashara Mubaraka 1443H Live Relay</h1>
-<iframe loading="lazy" id="my-deferred-iframe" scrolling style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen"  src="" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>
-   
+<iframe loading="lazy" id="server1" scrolling style="width: 100%; height: 40%;" class=" mx-auto object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen"  src="" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>
+<div id="server2" data-player-id="c8478842-62c1-42d4-a8da-3a2647d0f010" style="width: 100%; height: 40%;">
+    <script src="//cdn.flowplayer.com/players/82b63cb3-cd47-46d0-ba77-b7a67c9c4bc2/native/flowplayer.async.js">
+    { "src": "https://player.mslivestream.net/mslive/5465c752d80e308e8efe81d1416a38d1.sdp/playlist.m3u8", "my_option": "option" }
+    </script>
+</div>
+
 <!-- <iframe loading="lazy" id="my-deferred-iframe" scrolling src="" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay"></iframe>   -->
 </div>
 
@@ -165,6 +191,28 @@ box-shadow:
 </div>
 <!-- <div class="h-16" style="width:100%; background:#062f07 url(motif-design.png) repeat-x bottom;"></div> -->
 
+
+<script>
+    var server1 = document.getElementById('server1');
+    var server2 = document.getElementById('server2');
+    server2.style.display = "none";
+    var sBtn1 = document.getElementById("sBtn1");
+    var sBtn2 = document.getElementById("sBtn2");
+    var sBtn3 = document.getElementById("sBtn3");
+    
+   function watchOne(){
+        server1.style.display="block";
+        server2.style.display="none";
+    }
+    function watchTwo(){
+        server2.style.display="block";
+        server1.style.display="none";
+    }
+    function watchThree(){
+        //server2.style.display="block"
+    }
+</script>
+
 <script>
         $(window).on('load',function(){
             $(".loader").fadeOut(500);
@@ -174,13 +222,13 @@ box-shadow:
         scrollTop: $("#mainDiv").offset().top
     }, 2000);
 });
-$(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    // Do something
-    $('html, body').animate({
-        scrollTop: $("#mainDiv").offset().top
-    }, 2000);
-});
+// $(window).scroll(function (event) {
+//     var scroll = $(window).scrollTop();
+//     // Do something
+//     $('html, body').animate({
+//         scrollTop: $("#mainDiv").offset().top
+//     }, 2000);
+// });
     </script>
 <script type="text/javascript">
  $(document).ready(function(){  
@@ -216,7 +264,7 @@ $(window).scroll(function (event) {
   
  });
  function loadDeferredIframe() {
-        var iframe = document.getElementById("my-deferred-iframe");
+        var iframe = document.getElementById("server1");
         iframe.src = "https://streaming.livebox.co.in/livebox/player/?chnl=dawoodi"
     };
     window.onload = loadDeferredIframe;
