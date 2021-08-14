@@ -138,11 +138,10 @@ user-select: none;
 <h1 class=" text-center text-white font-medium text-2xl">Ashara Mubaraka 1443H</h1>
 
 <div class="mx-auto mt-10 flex flex-wrap md:flex-row items-center" style="width: 70%;">
-    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn active" id="sBtn1" onclick="window.location.href='welcome.html'">Server A</button>
-    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn2" onclick="window.location.href='serverB.html'">Server B</button>
+    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn1" onclick="window.location.href='welcome.html'">Server A</button>
+    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn active" id="sBtn2" onclick="window.location.href='serverB.html'">Server B</button>
     <!-- <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn3" onclick="">Server 3</button> -->
 </div>
-
 
 <div style="background-color: #fefbf5;
 box-shadow:
@@ -154,11 +153,8 @@ box-shadow:
 0 0px 0px rgba(0, 0, 0, 0.12); width: 80%;" class="mx-auto rounded mb-10 mt-8 h-auto xl:h-auto px-3 py-3" id="mainDiv">
 
 <h1 class="text-center lg:text-left lg:ml-2 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px; color:#7f1801;">Ashara Mubaraka 1443H Live Relay</h1>
-<div id="server2" data-player-id="c8478842-62c1-42d4-a8da-3a2647d0f010" style="width: 100%; height: 40%;">
-    <script src="//cdn.flowplayer.com/players/82b63cb3-cd47-46d0-ba77-b7a67c9c4bc2/native/flowplayer.async.js">
-    { "src": "https://player.mslivestream.net/mslive/5465c752d80e308e8efe81d1416a38d1.sdp/playlist.m3u8", "my_option": "option" }
-    </script>
-</div>
+<iframe loading="lazy" id="server1" scrolling style="width: 100%; height: 40%;" class=" mx-auto object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen"  src="" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>
+
 
 <!-- <iframe loading="lazy" id="my-deferred-iframe" scrolling src="" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay"></iframe>   -->
 </div>
@@ -190,6 +186,7 @@ box-shadow:
 
 </div>
 <!-- <div class="h-16" style="width:100%; background:#062f07 url(motif-design.png) repeat-x bottom;"></div> -->
+
 
 
 
@@ -243,6 +240,11 @@ box-shadow:
   }
   
  });
+ function loadDeferredIframe() {
+        var iframe = document.getElementById("server1");
+        iframe.src = "https://streaming.livebox.co.in/livebox/player/?chnl=dawoodi"
+    };
+    window.onload = loadDeferredIframe;
  </script>
 <script>
       window.oncontextmenu = function () {
