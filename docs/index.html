@@ -85,7 +85,7 @@ user-select: none;
                 
               </div>
               <div class="mt-4 items-center flex justify-between">
-                <p class="px-4 py-1 text-center text-black font-medium w-full">Version 29.01.2022.90</p>
+                <p class="px-4 py-1 text-center text-black font-medium w-full">Version 29.01.2022.89</p>
               </div>
              <!-- <div class="flex items-center flex-wrap cursor-pointer bg-white rounded px-2 mt-5">
               <a class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0" href="sadaqallah.html">Click here for Sadaqallah
@@ -179,13 +179,7 @@ $(document).ready(function(){
                 return false;
             }
         });
-
-  today = new Date();
-  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  var d = new Date().getDay();
-  var dayName = days[d];
-  var date = new Date().toDateString();
+ function addUser() {
     // Data saved successfully!
     var checkbox = document.getElementById('rememberMe').checked;
     if(checkbox){
@@ -196,7 +190,7 @@ $(document).ready(function(){
     console.log("data saved");
     window.location.href="welcome.html";
 
-
+  }
 
   
 </script>
