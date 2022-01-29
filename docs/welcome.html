@@ -17,7 +17,14 @@
   <meta property="og:url" content="https://burhanuddinhamzabhai.dev/" />
   <meta property="og:site_name" content="Godhra Jamaat" />
   <!-- open graph ends --><link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
+  <script type="text/javascript" src="test/credentials.json"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+  
   <style type="text/css">
   body{
     background-repeat: repeat;
@@ -283,8 +290,33 @@ box-shadow:
   
  });
 	 function loadDeferredIframe() {
+         var frameSRC;
+        var credentials = JSON.parse(data)
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+  apiKey: credentials[0].apiKey,
+  authDomain: credentials[0].authDomain,
+  databaseURL: credentials[0].databaseURL,
+  projectId: credentials[0].projectId,
+  storageBucket: credentials[0].storageBucket,
+  messagingSenderId: credentials[0].messagingSenderId,
+  appId: credentials[0].appId,
+  measurementId: credentials[0].measurementId
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  var database = firebase.database()
+  firebase.database().ref("youtube-src").once('value',(snap)=>{
+    snap.forEach(function(childSnapshot) {
+        var data = childSnapshot.val()
         var iframe = document.getElementById("server1");
-        iframe.src = "https://www.youtube.com/embed/gT3WHrUuhKo"
+        iframe.src = data;
+        //console.log(frameSRC)
+        // <iframe width="1024" height="576" src="https://www.youtube.com/embed/gT3WHrUuhKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    });
+});
     };
     window.onload = loadDeferredIframe;
  </script>
