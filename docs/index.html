@@ -147,14 +147,24 @@ $(document).ready(function(){
   				d.setTime(d.getTime() + (24*60*60*1000));
   				var expires = "expires="+ d.toUTCString();
   				document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
-            
+          var checkbox = document.getElementById('rememberMe').checked;
+    if(checkbox){
+      localStorage.setItem("username", itsnum);
+    }else if(!(checkbox) && localStorage.getItem("username")){
+      localStorage.removeItem("username");
+    }
+    console.log("data saved");
+    itsnum = field.ITS_ID;
+            username= field.Full_Name;
             if(field.Admin == "True"){
               window.location.href="admin.html"
+            }else{
+    window.location.href="welcome.html";
+
             }
 
-            itsnum = field.ITS_ID;
-            username= field.Full_Name;
-            addUser();
+            
+            //addUser();
             return false;
       		}
 
