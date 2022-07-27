@@ -298,6 +298,8 @@ function checkIframeLoaded() {
         //iframe.contentWindow.alert("Hello");
         iframe.contentWindow.onload = function(){
             console.log("I am loaded");
+    document.getElementsByClassName("ytp-show-cards-title")[0].style.display = 'none';
+
         };
         // The loading is complete, call the function we want executed once the iframe is loaded
         afterLoading();
@@ -310,8 +312,6 @@ function checkIframeLoaded() {
 
 function afterLoading(){
     console.log("I am here");
-    document.getElementsByClassName("ytp-show-cards-title")[0].style.display = 'none';
-
 }
  </script>
 <script>
