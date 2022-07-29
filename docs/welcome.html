@@ -113,6 +113,7 @@ html::-webkit-scrollbar-thumb{
 .btnGrp{
     width: 50%;
 }
+
 @media screen and (max-width:786px){
     #mainDiv{
         width: 70%;
@@ -129,7 +130,7 @@ html::-webkit-scrollbar-thumb{
 }
 </style>
 </head>
-<body oncontextmenu="return false" onload="checkIframeLoaded();">
+<body oncontextmenu="return false" >
   <div class="loader">
         <div></div>
     </div>
@@ -172,8 +173,8 @@ html::-webkit-scrollbar-thumb{
 <!-- <h1 class=" text-center text-white font-medium text-2xl">Ashara Mubaraka 1443H</h1> -->
 
 <div class="mx-auto mt-10 flex flex-wrap md:flex-row items-center btnGrp" >
-    <!-- <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn active" id="sBtn1" onclick="window.location.href='welcome.html'">Server A</button> -->
-    <!-- <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn2" onclick="window.location.href='serverB.html'">Server B</button> -->
+    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn active" id="sBtn1" onclick="window.location.href='welcome.html'">Server A</button>
+    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn2" onclick="window.location.href='serverB.html'">Server B</button>
     <!-- <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn " id="sBtn3" onclick="window.location.href='serverC.html'">Server C</button> -->
     <!-- <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn4" onclick="window.location.href='audioOnly.html'">Audio Only</button> -->
     </div>
@@ -189,7 +190,11 @@ box-shadow:
 0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 mt-8 h-auto xl:h-auto px-3 py-3" id="mainDiv">
 
 <h1 class="text-center lg:text-left lg:ml-2 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px; color:#0e4653;">Live Relay</h1>
-<iframe loading="lazy" id="server1" src="https://www.youtube-nocookie.com/embed/4T0i60VWGfo" scrolling style="width: 100%; height: 40%;" class=" mx-auto object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen"  src="" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>
+<iframe loading="lazy" id="server1" src="https://vimeo.com/event/2318496/embed" scrolling style="width: 100%; height: 40%;" class=" mx-auto object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>
+<!-- <button class="flex mx-auto bg-blue-800 border-0 py-3 px-16 focus:outline-none text-white rounded text-lg" onclick="goFullscreen()">Make Fullscreen</button> -->
+
+
+
 <!-- <iframe src="https://vimeo.com/event/1223676/embed"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="width:100%;height:40%;"></iframe> -->
 <!-- <div id="server2" data-player-id="c8478842-62c1-42d4-a8da-3a2647d0f010" style="width: 100%; height: 40%;">
     <script src="//cdn.flowplayer.com/players/82b63cb3-cd47-46d0-ba77-b7a67c9c4bc2/native/flowplayer.async.js">
@@ -232,6 +237,7 @@ box-shadow:
 
 
 <script>
+    
         $(window).on('load',function(){
             $(".loader").fadeOut(500);
             $(".content").fadeIn(500);
@@ -275,46 +281,11 @@ box-shadow:
   }
   
  });
-	//  function loadDeferredIframe() {
-    //      var frameSRC;
-    //     var iframe = document.getElementById("server1");
-    //     iframe.src = "";
-    //     };
-    // window.onload = loadDeferredIframe;
 
-//     const iframe = document.querySelector('iframe')
-//     document.addEventListener("DOMContentLoaded", function() {
-// });
-// function onLoadHandler() {
-//     document.getElementsByClassName("ytp-show-cards-title")[0].style.display = 'none';
-
-// }
-
-function checkIframeLoaded() {
-    // Get a handle to the iframe element
-    var iframe = document.getElementById('server1');
-    var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-    // Check if loading is complete
-    if (  iframeDoc.readyState  == 'complete' ) {
-        //iframe.contentWindow.alert("Hello");
-        iframe.contentWindow.onload = function(){
-            console.log("I am loaded");
-    document.getElementsByClassName("ytp-show-cards-title")[0].style.display = 'none';
-
-        };
-        // The loading is complete, call the function we want executed once the iframe is loaded
-        afterLoading();
-        return;
-    } 
-
-    // If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
-    window.setTimeout(checkIframeLoaded, 100);
+function goFullscreen(){
+    document.getElementById("server1").classList.add("fullScreen");
 }
 
-function afterLoading(){
-    console.log("I am here");
-}
  </script>
 <script>
       window.oncontextmenu = function () {
