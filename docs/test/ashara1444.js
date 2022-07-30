@@ -721,5 +721,25 @@
     {
         "ITS_ID": "60436252",
         "Full_Name": "Alaqmar bhai  Husain bhai Bhikhapurwala"
+    },
+    {
+        "ITS_ID": "30500985",
+        "Full_Name": "Mustafa bhai  Enayatali bhai Ratlamwala"
+    },
+    {
+        "ITS_ID": "60466264",
+        "Full_Name": "Zainab bai  Hakimuddin bhai Morawala"
+    },
+    {
+        "ITS_ID": "60443579",
+        "Full_Name": "Zainab bai  Baqir bhai Ambakhutwala"
+    },
+    {
+        "ITS_ID": "30427743",
+        "Full_Name": "Naqiyah bai  Abdulqadir bhai colambowala"
+    },
+    {
+        "ITS_ID": "60463313",
+        "Full_Name": "Aqeel bhai  Shafaqathusain bhai Gulamhuseinwala"
     }
 ]
