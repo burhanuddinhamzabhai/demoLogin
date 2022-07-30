@@ -713,5 +713,5 @@
     {
         "ITS_ID": "50455165",
         "Full_Name": "Shabbir Bhai Saheb Mohammad Bhai Saheb Vaziri"
-    },
+    }
 ]
