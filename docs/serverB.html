@@ -16,8 +16,10 @@
   <meta property="og:description" content="Watch Live Relay of Majlis, Vaaz, other different Miqaats from Dawoodi Bohra Jamaat Godhra. Designed and Developed by Dot53 websolutions" />
   <meta property="og:url" content="https://burhanuddinhamzabhai.dev/" />
   <meta property="og:site_name" content="Godhra Jamaat" />
-  <!-- open graph ends --><link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
+  <!-- open graph ends -->
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>  
+  <link href="https://cdn.plyr.io/3.5.6/plyr.css" rel="stylesheet"></link>
   <style type="text/css">
   body{
     background-repeat: repeat;
@@ -107,6 +109,7 @@ html::-webkit-scrollbar-thumb{
     width: 50%;
 }
 
+
 @media screen and (max-width:786px){
     #mainDiv{
         width: 70%;
@@ -125,38 +128,9 @@ html::-webkit-scrollbar-thumb{
  <section class="content text-gray-600 body-font">
      <!-- ashara-nav -->
      <header class="h-10 " style="width:100%; padding: 5px; top:0;background: url(Motif_Header_1444.png) repeat-x top #0e4653; box-shadow: 0 3px 10px -6px #777;position: fixed;">
-
-     <!-- <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
-            <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
-                </nav>
-            <a
-                class="flex order-first lg:order-none w-3/5 title-font font-medium items-center lg:items-center lg:justify-center">
-                <span class="ml-3 text-xl text-white"style=""id="wText"></span>
-            </a>
-            <div class="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-                <button class="text-white ml-4 py-2 px-3 rounded-lg" id="logoutBtn" style="background-color: #8a2900;">
-                    Logout
-                </button>
-            </div>
-        </div> -->
     </header>
-
     <!-- ends -->
-          <!-- <header style="width:100%; padding: 5px; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;">
-        <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
-            <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
-                </nav>
-            <a
-                class="flex order-first lg:order-none w-3/5 title-font font-medium items-center lg:items-center lg:justify-center">
-                <span class="ml-3 text-xl"style=""id="wText"></span>
-            </a>
-            <div class="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-                <button class="text-white ml-4 py-2 px-3 rounded-lg" id="logoutBtn" style="background-color: #8a2900;">
-                    Logout
-                </button>
-            </div>
-        </div>
-    </header> -->
+     
     <!-- ashara bg -->
     <div class="mt-20 lg:mt-16 md:mt-16 sm:mt-16 max-w-screen mx-auto" style="border-bottom: 2px solid #0e4653;">
         <picture class="mx-auto">
@@ -191,31 +165,12 @@ box-shadow:
 0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 mt-8 h-auto xl:h-auto px-3 py-3" id="mainDiv">
 
 <h1 class="text-center lg:text-left lg:ml-2 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px; color:#0e4653;">Live Relay</h1>
-<iframe loading="lazy" id="server1" scrolling style="width: 100%; height: 40%;" class=" mx-auto object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen"  src="" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" seamless></iframe>
+<!-- <iframe loading="lazy" id="server1" scrolling style="width: 100%; height: 40%;" class=" mx-auto object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen"  src="" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" seamless></iframe> -->
+<div class="w">  
+     <div data-plyr-embed-id="tmeGV_Wwd2M" data-plyr-provider="youtube" id="player"></div>  
+</div>  
 
-
-<!-- <iframe loading="lazy" id="my-deferred-iframe" scrolling src="" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay"></iframe>   -->
 </div>
-
-
-
-      <!-- <h1 class="mt-32 lg:mt-16 md:mt-16 sm:mt-16 text-center text-blue-600 font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
-      <h1 class=" text-center lg\:text-gray-700 font-medium text-2xl">Ashara Mubaraka 1443H</h1>
-      
-      <div style="height: 40px; background-color: #eadfce;" class="mx-auto rounded mt-10 w-10/12">
-        <h1 class="text-center lg:text-left lg:ml-5 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px;">Ashara Mubaraka 1443H Live Relay</h1>
-      </div>
-      <div style="background-color: #fff;
-      box-shadow:
-      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-      0 12.5px 10px rgba(0, 0, 0, 0.06),
-      0 0px 0px rgba(0, 0, 0, 0.072),
-      0 0px 0px rgba(0, 0, 0, 0.086),
-      0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 w-10/12 h-auto xl:h-auto px-3 py-3">
-      	<iframe loading=lazy scrolling src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>   
-      </div>
-       -->
 
 </section>
 <div class="p-2 w-full mb-10">
@@ -225,9 +180,9 @@ box-shadow:
 </div>
 <div class="h-16" style="width:100%; background: url(Motif_Footer_1444.png) repeat-x bottom;"></div>
 
-
-
-
+<script>   
+    const players = Plyr.setup('#player');
+</script>
 <script>
 
         $(window).on('load',function(){
