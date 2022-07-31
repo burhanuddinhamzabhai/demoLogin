@@ -801,5 +801,29 @@
     {
         "ITS_ID": "60429570",
         "Full_Name": "Zareena bai  Nooruddin bhai Vali"
+    },
+    {
+        "ITS_ID": "60466651",
+        "Full_Name": "Burhanuddin bhai  Najmuddin bhai Dalal"
+    },
+    {
+        "ITS_ID": "20403443",
+        "Full_Name": "Zainab bai  Husain bhai Fakhri"
+    },
+    {
+        "ITS_ID": "60463472",
+        "Full_Name": "Aliakbar bhai  Husain bhai Kakajiwala"
+    },
+    {
+        "ITS_ID": "60466064",
+        "Full_Name": "Rashida bai  Abbas bhai Jinwala"
+    }, 
+    {
+        "ITS_ID": "60460703",
+        "Full_Name": "Tasneem bai  Husain bhai Safari"
+    },
+    {
+        "ITS_ID": "60463005",
+        "Full_Name": "Zainab bai  Anis bhai Kandoi"
     }
 ]
