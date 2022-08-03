@@ -913,5 +913,25 @@
     {
         "ITS_ID": "60466969",
         "Full_Name": "Rizwana bai  Nooruddin bhai Ajabshawala"
+    },
+    {
+        "ITS_ID": "60460350",
+        "Full_Name": "Farida bai  Fakhruddin bhai Kakanpurwala"
+    },
+    {
+        "ITS_ID": "60436283",
+        "Full_Name": "Batul bai  Mohammed bhai Vejalpurwala"
+    },
+    {
+        "ITS_ID": "20403427",
+        "Full_Name": "Rashida bai  Yusuf bhai Patel"
+    },
+    {
+        "ITS_ID": "60460681",
+        "Full_Name": "Banu bai  Aunali bhai Dalal"
+    },
+    {
+        "ITS_ID": "20403732",
+        "Full_Name": "Bilqis bai  Qurbanhusain bhai Lakdawala"
     }
 ]
