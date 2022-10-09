@@ -875,16 +875,8 @@
         "Full_Name": "Fatema bai  Zainulabedeen bhai Gazi"
     },
     {
-        "ITS_ID": "60443915",
-        "Full_Name": "Tasneem bai  Qaid bhai Lokhandwala"
-    },
-    {
         "ITS_ID": "60463118",
         "Full_Name": "Fatema bai  Zainulabedeen bhai Gazi"
-    },
-    {
-        "ITS_ID": "60443915",
-        "Full_Name": "Tasneem bai  Qaid bhai Lokhandwala"
     },
     {
         "ITS_ID": "60436322",
@@ -981,5 +973,9 @@
 {
             "ITS_ID": "60429574",
             "Full_Name": "Ashura"
+        },
+    {
+            "ITS_ID": "78611053",
+            "Full_Name": "User-78611053"
         }
 ]
