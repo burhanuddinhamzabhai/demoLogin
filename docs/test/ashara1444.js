@@ -1031,4 +1031,8 @@
         "ITS_ID": "20433907",
         "Full_Name": "Taherbhai Simaliyawala"
     },
+    {
+        "ITS_ID": "60443714",
+        "Full_Name": "Sugra shk Nuruddin Bhai Godhrawala"
+    },
 ]
