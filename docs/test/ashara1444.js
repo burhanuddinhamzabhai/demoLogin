@@ -1009,8 +1009,7 @@
     {
             "ITS_ID": "60463779",
             "Full_Name": "Zainab pitolwala"
-        }
-    ,
+        },
     {
         "ITS_ID": "50427343",
         "Full_Name": "Fizza bai Asgarali bhai Cyclewala"
@@ -1034,5 +1033,5 @@
     {
         "ITS_ID": "60443714",
         "Full_Name": "Sugra shk Nuruddin Bhai Godhrawala"
-    },
+    }
 ]
