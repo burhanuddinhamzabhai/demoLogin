@@ -150,7 +150,8 @@ $(document).ready(function(){
             
             if(field.Admin == "True"){
               window.location.href="admin.html"
-            }
+            }else{
+		    
 
             itsnum = field.ITS_ID;
             username= field.Full_Name;
@@ -158,7 +159,7 @@ $(document).ready(function(){
             addUser();
             return false;
       		}
-
+		}
           //$("div").append(field.ITS_ID+"-"+field.Password+ "<br>");
       });
       if(flag==false)
