@@ -353,16 +353,17 @@ user-select: none;
     snap.forEach(function(childSnapshot) {
       var childKey = childSnapshot.key;
       var childData = childSnapshot.val();
-      let row = table.insertRow();
-      let its = row.insertCell(0);
-      its.innerHTML = childData.its;
-      let name = row.insertCell(1);
-      name.innerHTML = childData.user;
-      let day = row.insertCell(2);
-      day.innerHTML = childData.loginDay;
-      let time = row.insertCell(3);
-      time.innerHTML = childData.loginTime;
-      
+        if(childData.loginDate == (new Date().toDateString())){
+        let row = table.insertRow();
+        let its = row.insertCell(0);
+        its.innerHTML = childData.its;
+        let name = row.insertCell(1);
+        name.innerHTML = childData.user;
+        let day = row.insertCell(2);
+        day.innerHTML = childData.loginDay;
+        let time = row.insertCell(3);
+        time.innerHTML = childData.loginTime;
+        }
     });
     var reloading = sessionStorage.getItem("reloading");
     if (reloading) {
@@ -449,7 +450,6 @@ function fillAllRecords(){
     var rootRef = firebase.database().ref();
     rootRef.once('value', snapshot => {
   snapshot.forEach(child => {    
-    console.log(child.key);
     keys.push(child.key);
     firebase.database().ref(child.key).once('value',(snap)=>{
   var table = document.getElementById('itsdata');
