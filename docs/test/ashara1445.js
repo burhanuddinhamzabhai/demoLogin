@@ -585,5 +585,33 @@
     {
         "ITS_ID": "60466211",
         "Full_Name": "Hurratulmaleka bai  Aliasgar bhai Chathiwala"
-    }
+    },
+	 {
+            "ITS_ID": "60430950",
+            "Full_Name": "Zainab bai  Qurbanhusain bhai Mithiborwala"
+        },
+	{
+            "ITS_ID": "60463498",
+            "Full_Name": "Nafisa bai  Anis bhai Jariwala"
+        },
+	{
+            "ITS_ID": "30922002",
+            "Full_Name": "Jafar bhai  Sadiq bhai Patel"
+        },
+	{
+            "ITS_ID": "60460415",
+            "Full_Name": "Zainab bai  Akbar bhai Khokhawala"
+        },
+	{
+            "ITS_ID": "20429846",
+            "Full_Name": "Hatim bhai  Shabbarhusain bhai Vaghjipurwala"
+        },
+	{
+            "ITS_ID": "20403413",
+            "Full_Name": "Moiz bhai  Khurshid bhai Piplodwala"
+        },
+	{
+            "ITS_ID": "50409978",
+            "Full_Name": "Zohra bai baluwala"
+        }
 ]
