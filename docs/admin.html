@@ -361,7 +361,9 @@ user-select: none;
         name.innerHTML = childData.user;
         let day = row.insertCell(2);
         day.innerHTML = childData.loginDay;
-        let time = row.insertCell(3);
+        let date = row.insertCell(3);
+        date.innerHTML = childData.loginDate;
+        let time = row.insertCell(4);
         time.innerHTML = childData.loginTime;
         }
     });
@@ -389,13 +391,15 @@ user-select: none;
         column1 = "ITS Number";
         column2 = "Username";
         column3 = "Login Day";
-        column4 = "Login Time";
+        column4 = "Login Date";
+        column5 = "Login Time";
         rows.push(
             [
                 column1,
                 column2,
                 column3,
-                column4
+                column4,
+                column5
             ]
         );
       //iterate through rows of table
@@ -406,6 +410,7 @@ user-select: none;
         column2 = row.cells[1].innerText;
         column3 = row.cells[2].innerText;
         column4 = row.cells[3].innerText;
+        column5 = row.cells[4].innerText;
  
     /* add a new records in the array */
         rows.push(
@@ -413,7 +418,8 @@ user-select: none;
                 column1,
                 column2,
                 column3,
-                column4
+                column4,
+                column5
             ]
         );
  
@@ -464,7 +470,9 @@ function fillAllRecords(){
       name.innerHTML = childData.user;
       let day = row.insertCell(2);
       day.innerHTML = childData.loginDay;
-      let time = row.insertCell(3);
+      let date = row.insertCell(3);
+      date.innerHTML = childData.loginDate;
+      let time = row.insertCell(4);
       time.innerHTML = child.key + " | " + childData.loginTime;
 
     });
