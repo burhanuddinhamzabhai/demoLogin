@@ -587,10 +587,6 @@
     Full_Name: "Hurratulmaleka bai  Aliasgar bhai Chathiwala",
   },
   {
-    ITS_ID: "60430950",
-    Full_Name: "Zainab bai  Qurbanhusain bhai Mithiborwala",
-  },
-  {
     ITS_ID: "60463498",
     Full_Name: "Nafisa bai  Anis bhai Jariwala",
   },
