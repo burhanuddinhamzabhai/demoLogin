@@ -16,45 +16,39 @@
   <meta property="og:description" content="Watch Live Relay of Majlis, Vaaz, other different Miqaats from Dawoodi Bohra Jamaat Godhra. Designed and Developed by Dot53 websolutions" />
   <meta property="og:url" content="https://burhanuddinhamzabhai.dev/" />
   <meta property="og:site_name" content="Godhra Jamaat" />
-  <!-- open graph ends -->
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vidstack/styles/defaults.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vidstack/styles/community-skin/video.min.css" />
-    <script type="module" src="https://cdn.jsdelivr.net/npm/vidstack/dist/cdn/prod.js"></script>
- 
-
+  <!-- open graph ends --><link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
   <style type="text/css">
   body{
     background-repeat: repeat;
     /* background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url("bg.jpg"); */
      /* Ashara Theme */
-     background: url(bg_1444.png) repeat center center fixed #61a0b1;
+    background: url(AsharaBG.jpg) repeat center center fixed;
 }
 
 .btn:hover{
 background-color: #fefbf5;
-color: #0e4653;
+color: #8a2900;
 transition: 0.3s;
 }
 .btn{
-    background-color: #0e4653;
+    background-color: #8a2900;
     font-weight: bold;
     transition: 0.3s;
 }
 .active{
     background-color: #fefbf5;
-color: #0e4653;
+color: #8a2900;
 transition: 0.3s;
 }
 #logoutBtn:hover{
 background-color: #fefbf5;
-color: #0e4653;
+color: #8a2900;
 transition: 0.3s;
-border-bottom: 6px solid #0e4653;
+border-bottom: 6px solid #8a2900;
 }
 #logoutBtn{
-    background-color: #0e4653;
+    background-color: #8a2900;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -73,7 +67,7 @@ html::-webkit-scrollbar {
 }
 html::-webkit-scrollbar-thumb{
   /*background: linear-gradient(180deg,#F0CB35,#C02425);*/
-  background: #0e4653;
+  background: #8a2900;
   border-radius: 50px;
 }
 .content{
@@ -84,14 +78,14 @@ html::-webkit-scrollbar-thumb{
     width: 100vw;
     overflow: hidden;
     /* background-color: #f1eee9; */
-    background-color: #61a0b1;
+    background-color: #062f07;
     position: absolute;
 }
 .loader>div{
     height: 100px;
     width: 100px;
     border: 15px solid #fff;
-    border-top-color: #0e4653;
+    border-top-color: #8a2900;
     position: absolute;
     margin: auto;
     top: 0;
@@ -106,23 +100,6 @@ html::-webkit-scrollbar-thumb{
         transform: rotate(360deg);
     }
 }
-#mainDiv{
-    width: 50%;
-}
-.btnGrp{
-    width: 50%;
-}
-
-
-@media screen and (max-width:786px){
-    #mainDiv{
-        width: 70%;
-    }
-    .btnGrp{
-        width: 70%;
-    }
-}
-
 </style>
 </head>
 <body oncontextmenu="return false">
@@ -131,33 +108,63 @@ html::-webkit-scrollbar-thumb{
     </div>
  <section class="content text-gray-600 body-font">
      <!-- ashara-nav -->
-     <header class="h-10 " style="width:100%; padding: 5px; top:0;background: url(Motif_Header_1444.png) repeat-x top #0e4653; box-shadow: 0 3px 10px -6px #777;position: fixed;">
+     <header class="h-16 " style="width:100%; padding: 5px; top:0; background:#062f07 url(motif-design.png) repeat-x bottom; box-shadow: 0 3px 10px -6px #777;position: fixed;">
+        <!-- <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
+            <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
+                </nav>
+            <a
+                class="flex order-first lg:order-none w-3/5 title-font font-medium items-center lg:items-center lg:justify-center">
+                <span class="ml-3 text-xl text-white"style=""id="wText"></span>
+            </a>
+            <div class="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+                <button class="text-white ml-4 py-2 px-3 rounded-lg" id="logoutBtn" style="background-color: #8a2900;">
+                    Logout
+                </button>
+            </div>
+        </div> -->
     </header>
+
     <!-- ends -->
-     
+          <!-- <header style="width:100%; padding: 5px; top:0; background-color: #f1eee9; box-shadow: 0 3px 10px -6px #777;position: fixed;">
+        <div class="container mx-auto flex flex-wrap flex-row md:flex-row items-center">
+            <nav class="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
+                </nav>
+            <a
+                class="flex order-first lg:order-none w-3/5 title-font font-medium items-center lg:items-center lg:justify-center">
+                <span class="ml-3 text-xl"style=""id="wText"></span>
+            </a>
+            <div class="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+                <button class="text-white ml-4 py-2 px-3 rounded-lg" id="logoutBtn" style="background-color: #8a2900;">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </header> -->
     <!-- ashara bg -->
-    <div class="max-w-screen mx-auto" style="border-bottom: 2px solid #0e4653;">
+    <div class="mt-20 lg:mt-16 md:mt-16 sm:mt-16 max-w-screen mx-auto" style="border-bottom: 2px solid #7f1801;">
         <picture class="mx-auto">
-            <source class="mx-auto" media="(max-width: 799px)" srcset="Default_1443.jpg">
-            <source class="mx-auto" media="(min-width: 800px)" srcset="Default_1443.jpg">
-            <img class="mx-auto" src="Default_1443.jpg" alt="Default_1443">
+            <source class="mx-auto" media="(max-width: 799px)" srcset="Ashara_1443_Green_Small.png">
+            <source class="mx-auto" media="(min-width: 800px)" srcset="Ashara_1443_Green.png">
+            <img class="mx-auto" src="Ashara_1443_Green.png" alt="Chris standing up holding his daughter Elva">
           </picture>
     <!-- <img loading=lazy src="Ashara_1443_Green_Small.png" srcset="Ashara_1443_Green_Small.png,
                                             Ashara_1443_Green.png 2x" style="width: auto; height: auto;" class="mx-auto" alt=""> -->
 </div>
-<div class="h-32" style="width:100%; background: url(Motif_Central_White_1444.png) repeat-x;background-size: 32px;"></div>
+<div class="h-16 -mt-5" style="width:100%; background:#062f07 url(Ashara-motif.jpg) repeat-x bottom;"></div>
 <h1 class=" text-center text-white font-medium text-2xl mt-5" id="wText"></h1>
 
 
 <h1 class="mt-16 lg:mt-16 md:mt-16 sm:mt-16 text-center text-white font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
-<h1 class=" text-center text-white font-medium text-2xl">Ashara Mubaraka 1445H</h1>
+<h1 class=" text-center text-white font-medium text-2xl">Ashara Mubaraka 1443H</h1>
 
-<div class="mx-auto mt-10 flex flex-wrap md:flex-row items-center btnGrp">
-   <!-- <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn1" onclick="window.location.href='welcome.html'">Server A</button> -->
-   <!-- <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn active" id="sBtn2" onclick="window.location.href='serverB.html'">Server B</button> -->
-    <!-- <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn3" onclick="window.location.href='serverC.html'">Server C</button> -->
-    <!-- <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn4" onclick="window.location.href='audioOnly.html'">Audio Only</button> -->
-    </div>
+<div class="mx-auto mt-10 flex flex-wrap md:flex-row items-center" style="width: 60%;">
+    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn1" onclick="window.location.href='welcome.html'">Server A</button>
+    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn2" onclick="window.location.href='serverB.html'">Server B</button>
+    <!-- <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn active" id="sBtn3" onclick="window.location.href='serverC.html'">Server C</button> -->
+    <button class="flex mx-auto border-0 mt-5 py-3 px-16 md:px-8 focus:outline-none text-white rounded-full text-lg btn" id="sBtn4" onclick="window.location.href='audioOnly.html'">Audio Only</button>
+    
+</div>
+
 
 <div style="background-color: #fefbf5;
 box-shadow:
@@ -166,24 +173,36 @@ box-shadow:
 0 12.5px 10px rgba(0, 0, 0, 0.06),
 0 0px 0px rgba(0, 0, 0, 0.072),
 0 0px 0px rgba(0, 0, 0, 0.086),
-0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 mt-8 h-auto xl:h-auto px-3 py-3" id="mainDiv">
+0 0px 0px rgba(0, 0, 0, 0.12); width: 80%;" class="mx-auto rounded mb-10 mt-8 h-auto xl:h-auto px-3 py-3" id="mainDiv">
 
-<h1 class="text-center lg:text-left lg:ml-2 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px; color:#0e4653;">Live Relay</h1>
-<!-- <iframe loading="lazy" id="server1" scrolling style="width: 100%; height: 40%;" class=" mx-auto object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen"  src="" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" seamless></iframe> -->
-<media-player
-  title="Sprite Fight"
-  src="https://youtu.be/S6pw7mqg7nM"
-  aspect-ratio="16/9"
-  
->
-  <media-outlet>
-   
-  </media-outlet>
-  <media-community-skin></media-community-skin>
-</media-player>
- 
-
+<h1 class="text-center lg:text-left lg:ml-2 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px; color:#7f1801;">Ashara Mubaraka 1443H Live Relay</h1>
+<iframe width="100%" height="40%" src="https://www.youtube.com/embed/W0aHGUp9OM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+<!-- <iframe src="https://mixlr.com/godhrajamaat/embed" width="100%" height="180px" scrolling="no" frameborder="no" marginheight="0" marginwidth="0"></iframe> -->
+<!-- <audio src="https://mixlr.com/godhrajamaat"></audio> -->
+<!-- <div style="width: 100%; height: 40%;" id="GWSU-122a-TB4h-piOD-mzj0"></div>
+<script src="https://bradmax.com/client/files/player-js/293e2a2ac60416f287881dce5137c0065c53f850_6242/bradmax_player.js" type="text/javascript" data-bs-parent-id="GWSU-122a-TB4h-piOD-mzj0" data-bs-variables="eyJkYXRhUHJvdmlkZXIiOnsic291cmNlIjpbeyJ1cmwiOiJodHRwczovL3BsYXllci5tc2xpdmVzdHJlYW0ubmV0L21zbGl2ZS81NDY1Yzc1MmQ4MGUzMDhlOGVmZTgxZDE0MTZhMzhkMS5zZHAvcGxheWxpc3QubTN1OCJ9XSwiaWQiOiIzMjAyMiIsInRpdGxlIjoibXNsaXZlL21rbSJ9LCJsb2NhbGUiOiJlbiJ9"></script> --> 
+<!-- <iframe loading="lazy" id="my-deferred-iframe" scrolling src="" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay"></iframe>   -->
 </div>
+
+
+
+      <!-- <h1 class="mt-32 lg:mt-16 md:mt-16 sm:mt-16 text-center text-blue-600 font-bold text-4xl">Dawoodi Bohra Jamaat Godhra</h1>
+      <h1 class=" text-center lg\:text-gray-700 font-medium text-2xl">Ashara Mubaraka 1443H</h1>
+      
+      <div style="height: 40px; background-color: #eadfce;" class="mx-auto rounded mt-10 w-10/12">
+        <h1 class="text-center lg:text-left lg:ml-5 lg\:text-gray-800 font-medium text-sm" style="line-height: 40px;">Ashara Mubaraka 1443H Live Relay</h1>
+      </div>
+      <div style="background-color: #fff;
+      box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 0px 0px rgba(0, 0, 0, 0.072),
+      0 0px 0px rgba(0, 0, 0, 0.086),
+      0 0px 0px rgba(0, 0, 0, 0.12);" class="mx-auto rounded mb-10 w-10/12 h-auto xl:h-auto px-3 py-3">
+      	<iframe loading=lazy scrolling src="https://account3.livebox.co.in/livebox/player/?chnl=dawoodi" style="width: 100%; height: 60%;" class="object-cover object-center rounded w-full lg:w-full lg:h-64 xl:h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allow="autoplay" ></iframe>   
+      </div>
+       -->
 
 </section>
 <div class="p-2 w-full mb-10">
@@ -191,13 +210,11 @@ box-shadow:
   </div>
 
 </div>
-<div class="h-16" style="width:100%; background: url(Motif_Footer_1444.png) repeat-x bottom;"></div>
+<!-- <div class="h-16" style="width:100%; background:#062f07 url(motif-design.png) repeat-x bottom;"></div> -->
 
-<script>   
 
-</script>
+
 <script>
-
         $(window).on('load',function(){
             $(".loader").fadeOut(500);
             $(".content").fadeIn(500);
@@ -217,41 +234,36 @@ box-shadow:
 <script type="text/javascript">
  $(document).ready(function(){  
 	 //window.history.replaceState('','','/');
-//   $("#logoutBtn").click(function(){
-//    document.cookie = "ITS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-//    window.location.href="index.html";
-//   });
-//   var d=document.cookie;
-//   var name = "ITS=";
-//   var decodedCookie = decodeURIComponent(document.cookie);
-//   var ca = decodedCookie.split(';');
-//   var cv="";
-//   for(var i = 0; i <ca.length; i++) {
-//    var c = ca[i];
-//    while (c.charAt(0) == ' ') {
-//       c = c.substring(1);
-//     }
-//     if (c.indexOf(name) == 0) {
-//       cv=c.substring(name.length, c.length);
-//       break;
-//     }
-//   }
-//   if(cv=="")
-//   {
-//    window.location.href="index.html";
-//   }
-//   else
-//   {
-//    $("#wText").append(cv);
-//   }
+  $("#logoutBtn").click(function(){
+   document.cookie = "ITS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+   window.location.href="index.html";
+  });
+
+  var d=document.cookie;
+  var name = "ITS=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  var cv="";
+  for(var i = 0; i <ca.length; i++) {
+   var c = ca[i];
+   while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      cv=c.substring(name.length, c.length);
+      break;
+    }
+  }
+  if(cv=="")
+  {
+   //window.location.href="index.html";
+  }
+  else
+  {
+   $("#wText").append(cv);
+  }
   
  });
- function loadDeferredIframe() {
-        var iframe = document.getElementById("server1");
-        iframe.src = "https://www.youtube-nocookie.com/embed/7JoIbTjix20"
-    };
-    window.onload = loadDeferredIframe;
-
  </script>
 <script>
       window.oncontextmenu = function () {
