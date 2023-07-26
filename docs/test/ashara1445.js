@@ -649,5 +649,9 @@
         {
             "ITS_ID": "20403925",
             "Full_Name": "Fatema bai  Akbarali bhai Antelawala"
+        },
+        {
+            "ITS_ID": "20429827",
+            "Full_Name": "Shujauddin bhai  Shafaqathusain bhai Jalalbhaiwala"
         }
 ]
