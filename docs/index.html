@@ -85,7 +85,7 @@ user-select: none;
                 
               </div>
               <div class="mt-4 items-center flex justify-between">
-                <p class="px-4 py-1 text-center text-black font-medium w-full">Version 27.07.2023.267</p>
+                <p class="px-4 py-1 text-center text-black font-medium w-full">Version 27.07.2023.268</p>
               </div>
              <!-- <div class="flex items-center flex-wrap cursor-pointer bg-white rounded px-2 mt-5">
               <a class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0" href="sadaqallah.html">Click here for Sadaqallah
@@ -135,7 +135,7 @@ $(document).ready(function(){
       document.getElementById('loginBtn').innerHTML="Login";
 
     }else{
-    $.getJSON("/test/ashara1445.js", function(result){
+    $.getJSON("/test/ashara1444.js", function(result){
 
       $.each(result, function(i, field){
         
@@ -160,41 +160,12 @@ $(document).ready(function(){
 		}
           //$("div").append(field.ITS_ID+"-"+field.Password+ "<br>");
       });
-    });
-  
-    $.getJSON("/test/ashara1444.js", function(result){
-        $.each(result, function(i, field){
-        
-        if(ino==field.ITS_ID && pwd==field.ITS_ID)
-        {
-          flag=true;
-          
-          var d = new Date();
-        d.setTime(d.getTime() + (24*60*60*1000));
-        var expires = "expires="+ d.toUTCString();
-        document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
-          
-          if(field.Admin == "True"){
-            window.location.href="admin.html"
-          }else{
-      
 
-          itsnum = field.ITS_ID;
-          username= field.Full_Name;
-window.location.href="serverB.html";
-          addUser();
-          return false;
-        }
-  }
-        //$("div").append(field.ITS_ID+"-"+field.Password+ "<br>");
-    });
-
-
-    if(flag==false){
+      if(flag==false){
         alert("You are not autheticated to view this content, please contact jamaat office.");
         document.getElementById('loginBtn').innerHTML="Login";
       }
-      });
+    });
 
      
   }
