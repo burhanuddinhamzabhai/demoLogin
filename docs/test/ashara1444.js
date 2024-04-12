@@ -1043,5 +1043,40 @@
 	{
 		"ITS_ID": "60460440",
 		"Full_Name": "Sarrah bai  Hatim bhai Valikarimwala"
-	}
+	},
+ 	{
+            "ITS_ID": "30708668",
+            "Full_Name": "Nooruddin bhai  Fakhruddin bhai Vaghjipurwala"
+        },
+ 	{
+            "ITS_ID": "30708240",
+            "Full_Name": "Firoz bhai  Qayumali bhai Selvawala"
+        },
+ {
+            "ITS_ID": "20403249",
+            "Full_Name": "Abbas bhai  Shabbarhusain bhai Vaghjipurwala"
+        },
+ {
+            "ITS_ID": "60430607",
+            "Full_Name": "Amena bai  Mohammed bhai Lokhandwala"
+        },{
+            "ITS_ID": "20403962",
+            "Full_Name": "Ruqaiyah bai  Nooruddin bhai Nasikwala"
+        },
+{
+            "ITS_ID": "20403109",
+            "Full_Name": "Aziz bhai  Hatim bhai Kuwajarwala"
+        },
+ {
+            "ITS_ID": "60463884",
+            "Full_Name": "Naimat bai  Ibrahim bhai Lokhandwala"
+        },
+ {
+            "ITS_ID": "20400321",
+            "Full_Name": "Zainuddin bhai  Sharafali bhai Piplodwala"
+        },
+  {
+            "ITS_ID": "60463398",
+            "Full_Name": "Shameem bai  Zainuddin bhai Piplodwala"
+        }
 ]
