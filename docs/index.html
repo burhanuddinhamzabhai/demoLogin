@@ -1,94 +1,156 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Godhra Jamaat</title>
-  <meta name="author" content="Burhanuddin Mulla Hamzabhai Bariyawala">
-  <meta name="description" content="Watch Live Relay of Majlis, Vaaz, other different Miqaats from Dawoodi Bohra Jamaat Godhra. Designed and Developed by Dot53 websolutions">
-  <meta name="keywords" content="ITS, ITS52, Dawoodi, Bohra, Jamaat, Godhra, Burhanuddin, Hamzabhai, Dot53, Ashara, Majlis,Vaaz">
-  <meta name="google" content="nositelinkssearchbox" />
-  <link rel="canonical" href="http://burhanuddinhamzabhai.dev/" />
-  <meta name="robots" content="index, follow"/>
-  <!-- open graph meta -->
-  <meta property="og:type" content="Godhra Jamaat Developed By Burhanuddin Mulla Hamzabhai" />
-  <meta property="og:title" content="Godhra Jamaat" />
-  <meta property="og:description" content="Watch Live Relay of Majlis, Vaaz, other different Miqaats from Dawoodi Bohra Jamaat Godhra. Designed and Developed by Dot53 websolutions" />
-  <meta property="og:url" content="https://burhanuddinhamzabhai.dev/" />
-  <meta property="og:site_name" content="Godhra Jamaat" />
-  <!-- open graph ends -->
-<!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
-<script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Godhra Jamaat</title>
+    <meta name="author" content="Burhanuddin Mulla Hamzabhai Bariyawala" />
+    <meta
+      name="description"
+      content="Watch Live Relay of Majlis, Vaaz, other different Miqaats from Dawoodi Bohra Jamaat Godhra. Designed and Developed by Dot53 websolutions"
+    />
+    <meta
+      name="keywords"
+      content="ITS, ITS52, Dawoodi, Bohra, Jamaat, Godhra, Burhanuddin, Hamzabhai, Dot53, Ashara, Majlis,Vaaz"
+    />
+    <meta name="google" content="nositelinkssearchbox" />
+    <link rel="canonical" href="http://burhanuddinhamzabhai.dev/" />
+    <meta name="robots" content="index, follow" />
+    <!-- open graph meta -->
+    <meta
+      property="og:type"
+      content="Godhra Jamaat Developed By Burhanuddin Mulla Hamzabhai"
+    />
+    <meta property="og:title" content="Godhra Jamaat" />
+    <meta
+      property="og:description"
+      content="Watch Live Relay of Majlis, Vaaz, other different Miqaats from Dawoodi Bohra Jamaat Godhra. Designed and Developed by Dot53 websolutions"
+    />
+    <meta property="og:url" content="https://burhanuddinhamzabhai.dev/" />
+    <meta property="og:site_name" content="Godhra Jamaat" />
+    <!-- open graph ends -->
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-	<style type="text/css">
-  .login{
-  background: url('homebg.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#loginBtn:hover{
-background-color: #fefbf5;
-color: #8a2900;
-border-bottom: 6px solid #8a2900;
-transition: 0.3s;
-}
-#loginBtn{
-    background-color: #8a2900;
-    font-weight: bold;
-    transition: 0.3s;
-}
-body{
-  overflow-x: hidden;
-}
-html{
-  -webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
-}
+    <style type="text/css">
+      .login {
+        background: url("homebg.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #loginBtn:hover {
+        background-color: #fefbf5;
+        color: #8a2900;
+        border-bottom: 6px solid #8a2900;
+        transition: 0.3s;
+      }
+      #loginBtn {
+        background-color: #8a2900;
+        font-weight: bold;
+        transition: 0.3s;
+      }
 
-</style>
-<script type="text/javascript" src="test/credentials.json"></script>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
-<!-- TODO: Add SDKs for Firebase products that you want to use
+      #relayRazaBtn {
+        background-color: #fefbf5;
+        color: #8a2900;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      #relayRazaBtn:hover {
+        background-color: #8a2900;
+        color: #fefbf5;
+        border-bottom: 6px solid #fefbf5;
+        transition: 0.3s;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+      html {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+    </style>
+    <script type="text/javascript" src="test/credentials.json"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
 
-<script type="text/javascript" src="features.js"></script>
-</head>
-<body oncontextmenu="return false">
-
-<div class="h-screen font-sans login bg-cover">
-<div class="container mx-auto h-full flex flex-1 justify-center items-center">
-    <div class="w-full max-w-lg">
-      <div class="leading-loose">
-        <div class="max-w-xl m-auto p-10 bg-white bg-opacity-50 rounded shadow-xl">
-            <p class="text-2xl font-bold tracking-wide text-center">Welcome to Godhra Jamaat</p>
+    <script type="text/javascript" src="features.js"></script>
+  </head>
+  <body oncontextmenu="return false">
+    <div class="h-screen font-sans login bg-cover">
+      <div
+        class="container mx-auto h-full flex flex-1 justify-center items-center"
+      >
+        <div class="w-full max-w-lg">
+          <div class="leading-loose">
+            <div
+              class="max-w-xl m-auto p-10 bg-white bg-opacity-50 rounded shadow-xl"
+            >
+              <p class="text-2xl font-bold tracking-wide text-center">
+                Welcome to Godhra Jamaat
+              </p>
               <div class="">
-                <label class="block text-lg text-black font-bold" for="email">ITS No.</label>
-                <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white" style="border: 1px solid #8a2900;" type="text" id="itsno"  placeholder="ITS No."  required>
+                <label class="block text-lg text-black font-bold" for="email"
+                  >ITS No.</label
+                >
+                <input
+                  class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white"
+                  style="border: 1px solid #8a2900"
+                  type="text"
+                  id="itsno"
+                  placeholder="ITS No."
+                  required
+                />
               </div>
-              <div class="mt-2">
+              <!-- <div class="mt-2">
                 <label class="block  text-lg text-black font-bold">Password</label>
                  <input class="w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white" style="border: 1px solid #8a2900;" type="password" id="pass" placeholder="Password"  required>
-              </div>
+              </div> -->
               <label class="inline-flex items-center mt-3">
-                <input type="checkbox" class="form-checkbox h-5 w-5 text-green-600" id="rememberMe" checked><span class="ml-2 text-lg font-semibold text-black">Remember Me</span>
-            </label>
-              <div class="mt-4 items-center flex justify-between">
-                <button class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg w-full"
-                  type="button" id="loginBtn">Login</button>
-               
-                
+                <input
+                  type="checkbox"
+                  class="form-checkbox h-5 w-5 text-green-600"
+                  id="rememberMe"
+                  checked
+                /><span class="ml-2 text-lg font-semibold text-black"
+                  >Remember Me</span
+                >
+              </label>
+              <div
+                class="mt-4 items-center flex flex-col justify-between gap-4"
+              >
+                <button
+                  class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg w-full"
+                  type="button"
+                  id="loginBtn"
+                >
+                  Watch Live Relay
+                </button>
+                <button
+                  class="text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg w-full"
+                  type="button"
+                  id="relayRazaBtn"
+                  onclick="window.location.href='https://forms.gle/kugfEBKUrumtCEmX6'"
+                >
+                  Get Relay Raza
+                </button>
               </div>
               <div class="mt-4 items-center flex justify-between">
-                <p class="px-4 py-1 text-center text-black font-medium w-full">Version 12.08.2023.280</p>
+                <p class="px-4 py-1 text-center text-black font-medium w-full">
+                  Version 12.08.2023.280
+                </p>
               </div>
-             <!-- <div class="flex items-center flex-wrap cursor-pointer bg-white rounded px-2 mt-5">
+              <!-- <div class="flex items-center flex-wrap cursor-pointer bg-white rounded px-2 mt-5">
               <a class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0" href="sadaqallah.html">Click here for Sadaqallah
                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"></path>
@@ -96,16 +158,13 @@ user-select: none;
                 </svg>
               </a>
             </div> -->
-
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
-</div>
 
-
-<!-- <footer class="text-white body-font">
+    <!-- <footer class="text-white body-font">
   
   <div class="" style="background:#009866;">
     <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
@@ -116,128 +175,136 @@ user-select: none;
     </div>
   </div>
 </footer> -->
-	<script>
+    <script>
+      if (localStorage.getItem("username")) {
+        document.getElementById("itsno").value =
+          localStorage.getItem("username");
+        //document.getElementById('pass').value=localStorage.getItem("username");
+      }
+      var itsnum;
+      var username;
+      $(document).ready(function () {
+        window.history.replaceState("", "", "/");
+        $("#loginBtn").click(function () {
+          document.getElementById("loginBtn").innerHTML = "Logging In...";
+          var ino = itsno.value;
+          var pwd = itsno.value;
+          var flag = false;
+          if (ino != pwd) {
+            alert("its and password mismatched");
+            document.getElementById("loginBtn").innerHTML = "Login";
+          } else {
+            $.getJSON("/test/ashara1444.js", function (result) {
+              $.each(result, function (i, field) {
+                if (ino == field.ITS_ID && pwd == field.ITS_ID) {
+                  flag = true;
 
-    if(localStorage.getItem("username")){
-      document.getElementById('itsno').value=localStorage.getItem("username");
-      document.getElementById('pass').value=localStorage.getItem("username");
-    }
-    var itsnum;
-    var username;
-$(document).ready(function(){
-	window.history.replaceState('','','/');
-  $('#loginBtn').click(function(){
-    document.getElementById('loginBtn').innerHTML="Logging In...";
-  	var ino=itsno.value;
-  	var pwd=pass.value;
-    var flag=false;
-    if(ino != pwd){
-      alert("its and password mismatched");
-      document.getElementById('loginBtn').innerHTML="Login";
+                  var d = new Date();
+                  d.setTime(d.getTime() + 24 * 60 * 60 * 1000);
+                  var expires = "expires=" + d.toUTCString();
+                  document.cookie =
+                    "ITS=" + field.Full_Name + ";" + expires + ";path=/";
 
-    }else{
-    $.getJSON("/test/ashara1444.js", function(result){
+                  if (field.Admin == "True") {
+                    window.location.href = "admin.html";
+                  } else {
+                    itsnum = field.ITS_ID;
+                    username = field.Full_Name;
+                    window.location.href = "serverB.html";
+                    addUser();
+                    return false;
+                  }
+                }
+                //$("div").append(field.ITS_ID+"-"+field.Password+ "<br>");
+              });
 
-      $.each(result, function(i, field){
-        
-      		if(ino==field.ITS_ID && pwd==field.ITS_ID)
-      		{
-            flag=true;
-            
-      			var d = new Date();
-  				d.setTime(d.getTime() + (24*60*60*1000));
-  				var expires = "expires="+ d.toUTCString();
-  				document.cookie =  "ITS=" + field.Full_Name + ";" + expires + ";path=/";
-            
-            if(field.Admin == "True"){
-              window.location.href="admin.html"
-            }else{  
-            itsnum = field.ITS_ID;
-            username= field.Full_Name;
-	          window.location.href="serverB.html";
-            addUser();
-            return false;
-      		}
-		}
-          //$("div").append(field.ITS_ID+"-"+field.Password+ "<br>");
+              if (flag == false) {
+                alert(
+                  "You are not autheticated to view this content, please contact jamaat office."
+                );
+                document.getElementById("loginBtn").innerHTML = "Login";
+              }
+            });
+          }
+        });
       });
 
-      if(flag==false){
-        alert("You are not autheticated to view this content, please contact jamaat office.");
-        document.getElementById('loginBtn').innerHTML="Login";
-      }
-    });
-
-     
-  }
-  });
-});
-
-        window.oncontextmenu = function () {
-            return false;
+      window.oncontextmenu = function () {
+        return false;
+      };
+      $(document).keydown(function (event) {
+        if (event.keyCode == 123) {
+          return false;
+        } else if (
+          (event.ctrlKey && event.shiftKey && event.keyCode == 73) ||
+          (event.ctrlKey && event.shiftKey && event.keyCode == 74)
+        ) {
+          return false;
         }
-        $(document).keydown(function (event) {
-            if (event.keyCode == 123) {
-                return false;
+      });
+
+      var credentials = JSON.parse(data);
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: credentials[0].apiKey,
+        authDomain: credentials[0].authDomain,
+        databaseURL: credentials[0].databaseURL,
+        projectId: credentials[0].projectId,
+        storageBucket: credentials[0].storageBucket,
+        messagingSenderId: credentials[0].messagingSenderId,
+        appId: credentials[0].appId,
+        measurementId: credentials[0].measurementId,
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      var database = firebase.database();
+      today = new Date();
+      var time =
+        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      var days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      var d = new Date().getDay();
+      var dayName = days[d];
+      var date = new Date().toDateString();
+      function addUser() {
+        var childRef = credentials[0].path;
+        var path = itsnum + " on " + dayName + " at " + time;
+        database.ref(childRef + path).set(
+          {
+            loginTime: time,
+            user: username,
+            its: itsnum,
+            loginDate: date,
+            loginDay: dayName,
+          },
+          (error) => {
+            if (error) {
+              // The write failed...
+              console.log("error:" + error);
+            } else {
+              // Data saved successfully!
+              var checkbox = document.getElementById("rememberMe").checked;
+              if (checkbox) {
+                localStorage.setItem("username", itsnum);
+              } else if (!checkbox && localStorage.getItem("username")) {
+                localStorage.removeItem("username");
+              }
+              console.log("data saved");
+              window.location.href = "serverB.html";
             }
-            else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
-                return false;
-            }
-        });
-
-  var credentials = JSON.parse(data)
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-  apiKey: credentials[0].apiKey,
-  authDomain: credentials[0].authDomain,
-  databaseURL: credentials[0].databaseURL,
-  projectId: credentials[0].projectId,
-  storageBucket: credentials[0].storageBucket,
-  messagingSenderId: credentials[0].messagingSenderId,
-  appId: credentials[0].appId,
-  measurementId: credentials[0].measurementId
-};
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  var database = firebase.database()
-  today = new Date();
-  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  var d = new Date().getDay();
-  var dayName = days[d];
-  var date = new Date().toDateString();
- function addUser() {
-  var childRef = credentials[0].path;
-  var path = itsnum + " on " + dayName + " at " + time;
-     database.ref(childRef + path).set({
-        loginTime: time,
-        user: username,
-        its: itsnum,
-        loginDate: date,
-        loginDay: dayName
-     }, (error) => {
-  if (error) {
-    // The write failed...
-    console.log("error:"+error);
-  } else {
-    // Data saved successfully!
-    var checkbox = document.getElementById('rememberMe').checked;
-    if(checkbox){
-      localStorage.setItem("username", itsnum);
-    }else if(!(checkbox) && localStorage.getItem("username")){
-      localStorage.removeItem("username");
-    }
-    console.log("data saved");
-    window.location.href="serverB.html";
-
-  }
-     });
- }
-
-  
-</script>
-</body>
+          }
+        );
+      }
+    </script>
+  </body>
 </html>
 <!-- Developed by Burhanuddin Mulla Hamzabhai for more visit: https://burhanuddinhamzabhai.dev -->
