@@ -1,7 +1,8 @@
 [{
 		"ITS_ID": "60460544",
 		"Full_Name": "Burhan bhai Mulla Hamza bhai Bariyawala",
-		"Admin": "True"
+		"Admin": "True",
+		"Active":"false"
 	},
 	{
 		"ITS_ID": "60429797",
