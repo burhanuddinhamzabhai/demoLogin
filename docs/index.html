@@ -279,12 +279,7 @@
             console.log(snapshot.val().active)
           } else {
             console.log("No data available");
-          }
-        }).catch(function(error) {
-          console.error(error);
-        });
-        
-        database.ref(childRef + path).set(
+            database.ref(childRef + path).set(
           {
             loginTime: time,
             user: username,
@@ -311,6 +306,12 @@
             }
           }
         );
+          }
+        }).catch(function(error) {
+          console.error(error);
+        });
+        
+        
       }
     </script>
   </body>
