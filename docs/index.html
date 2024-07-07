@@ -139,7 +139,7 @@
               </div>
               <div class="mt-4 items-center flex justify-between">
                 <p class="px-4 py-1 text-center text-black font-medium w-full">
-                  Version 07.07.2024.323
+                  Version 07.07.2024.324
                 </p>
               </div>
               <!-- <div class="flex items-center flex-wrap cursor-pointer bg-white rounded px-2 mt-5">
@@ -280,7 +280,7 @@
               alert("User is already logged-in.");
               document.getElementById("loginBtn").innerHTML = "Login";
             }else if (snapshot.val().active === false){
-               database.ref(childRef + path).set(
+               database.ref(childRef + path).update(
           {
             active:true
           },

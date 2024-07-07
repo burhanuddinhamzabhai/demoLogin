@@ -211,9 +211,7 @@ box-shadow:
 // });
     </script>
 <script type="text/javascript">
-window.addEventListener("beforeunload", async function(event) {
-  event.preventDefault(); // Prevent immediate closing of the tab
-  
+window.addEventListener("unload", async function(event) {
   var credentials = JSON.parse(data);
   
   const firebaseConfig = {
@@ -228,23 +226,20 @@ window.addEventListener("beforeunload", async function(event) {
   };
   
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
   
   var childRef = credentials[0].path;
   var path = localStorage.getItem("GJitsId");
   var database = firebase.database();
   
   try {
-    await database.ref(childRef + path).set({ active: false });
+    await database.ref(childRef + path).update({ active: false });
     
-    // Data saved successfully!
+    // Data updated successfully
     localStorage.removeItem("GJitsId");
     document.cookie = "ITS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    // You might want to change the destination URL depending on your application flow
-    window.location.href = "index.html";
   } catch (error) {
-    // Handle any errors that occurred during the write
-    console.error("Error:", error);
+    // Handle any errors that occurred during the update
+    console.error("Firebase update error:", error);
     // Optionally, show an error message or log the error
     // Note: Depending on your use case, you might choose to still allow the tab to close
   }
