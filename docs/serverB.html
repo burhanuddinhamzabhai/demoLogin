@@ -230,6 +230,8 @@ box-shadow:
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
+	  var childRef = credentials[0].path;
+        var path = localStorage.getItem("GJitsId");
       var database = firebase.database();
 	   database.ref(childRef + path).set(
           {
