@@ -298,6 +298,7 @@
               
             } else {
               // Data saved successfully!
+              localStorage.setItem("GJitsId",itsnum);
               var checkbox = document.getElementById("rememberMe").checked;
               if (checkbox) {
                 localStorage.setItem("username", itsnum);
