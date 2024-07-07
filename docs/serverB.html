@@ -211,7 +211,8 @@ box-shadow:
 // });
     </script>
 <script type="text/javascript">
-window.addEventListener("unload", async function(event) {
+window.addEventListener("beforeunload", async function(event) {
+  event.preventDefault();
   var credentials = JSON.parse(data);
   
   const firebaseConfig = {
