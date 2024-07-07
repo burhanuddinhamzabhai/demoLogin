@@ -270,16 +270,18 @@
       function addUser() {
         var childRef = credentials[0].path;
         var path = itsnum;
+        var dbRef = firebase.database().ref(childPath);
+
         // Fetch the value
-      get(child(dbRef, childRef + path)).then((snapshot) => {
-        if (snapshot.exists()) {
-          console.log(snapshot.val());
-        } else {
-          console.log("No data available");
-        }
-      }).catch((error) => {
-        console.error(error);
-      });
+        dbRef.once('value').then(function(snapshot) {
+          if (snapshot.exists()) {
+            console.log(snapshot.val());
+          } else {
+            console.log("No data available");
+          }
+        }).catch(function(error) {
+          console.error(error);
+        });
         
         database.ref(childRef + path).set(
           {
