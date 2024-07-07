@@ -224,9 +224,9 @@ window.addEventListener("unload", async function(event) {
     appId: credentials[0].appId,
     measurementId: credentials[0].measurementId,
   };
-  
+  if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
-  
+  }
   var childRef = credentials[0].path;
   var path = localStorage.getItem("GJitsId");
   var database = firebase.database();
@@ -262,12 +262,14 @@ window.addEventListener("unload", async function(event) {
         measurementId: credentials[0].measurementId,
       };
       // Initialize Firebase
+      if (!firebase.apps.length) {
       firebase.initializeApp(firebaseConfig);
+      }
       firebase.analytics();
 	     var childRef = credentials[0].path;
         var path = localStorage.getItem("GJitsId");
         var database = firebase.database();
-	       database.ref(childRef + path).set(
+	       database.ref(childRef + path).update(
           {
             active:false
           },
