@@ -168,8 +168,6 @@
   </div>
 </footer> -->
     <script>
-      import { initializeApp } from "firebase/app";
-      import { getDatabase, ref, get, child } from "firebase/database";
       if (localStorage.getItem("username")) {
         document.getElementById("itsno").value =
           localStorage.getItem("username");
@@ -254,7 +252,6 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
       var database = firebase.database();
-      var dbRef = ref(db);
       today = new Date();
       var time =
         today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
