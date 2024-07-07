@@ -276,6 +276,10 @@
           if (snapshot.exists()) {
             console.log(snapshot.val());
             console.log(snapshot.val().active)
+            if(snapshot.val().active === true){
+              alert("User is already logged-in.");
+              document.getElementById("loginBtn").innerHTML = "Login";
+            }
           } else {
             console.log("No data available");
             database.ref(childRef + path).set(
