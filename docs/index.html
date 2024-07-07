@@ -270,7 +270,7 @@
       function addUser() {
         var childRef = credentials[0].path;
         var path = itsnum;
-        var dbRef = firebase.database().ref(childPath);
+        var dbRef = firebase.database().ref(childRef + path);
 
         // Fetch the value
         dbRef.once('value').then(function(snapshot) {
