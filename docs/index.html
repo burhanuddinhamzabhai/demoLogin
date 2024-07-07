@@ -252,6 +252,7 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
       var database = firebase.database();
+      var dbRef = ref(db);
       today = new Date();
       var time =
         today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -269,7 +270,18 @@
       var date = new Date().toDateString();
       function addUser() {
         var childRef = credentials[0].path;
-        var path = itsnum + " on " + dayName + " at " + time;
+        var path = itsnum;
+        // Fetch the value
+      get(child(dbRef, childRef + path)).then((snapshot) => {
+        if (snapshot.exists()) {
+          console.log(snapshot.val());
+        } else {
+          console.log("No data available");
+        }
+      }).catch((error) => {
+        console.error(error);
+      });
+        
         database.ref(childRef + path).set(
           {
             loginTime: time,
@@ -277,6 +289,7 @@
             its: itsnum,
             loginDate: date,
             loginDay: dayName,
+            active:true
           },
           (error) => {
             if (error) {
