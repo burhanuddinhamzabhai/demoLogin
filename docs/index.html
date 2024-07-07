@@ -275,7 +275,8 @@
         // Fetch the value
         dbRef.once('value').then(function(snapshot) {
           if (snapshot.exists()) {
-            alert(snapshot.val());
+            console.log(snapshot.val());
+            console.log(snapshot.val().active)
           } else {
             console.log("No data available");
           }
