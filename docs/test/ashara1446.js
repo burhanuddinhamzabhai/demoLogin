@@ -635,11 +635,6 @@
     "Admin": "false"
   },
   {
-    "ITS_ID": 20403435,
-    "Full_Name": "Shaikh Mohammed Bhai Asgarali Bhai Muthaiwala",
-    "Admin": "false"
-  },
-  {
     "ITS_ID": 20429826,
     "Full_Name": "Zehra Bai Nasir Bhai Zozwala",
     "Admin": "false"
@@ -703,5 +698,10 @@
     "ITS_ID": 60460544,
     "Full_Name": "Burhanuddin Mulla Hamzabhai Bariyawala",
     "Admin": "true"
+  },
+  {
+    "ITS_ID": 20391707,
+    "Full_Name": "Zakiyuddin Zainuddin Master",
+    "Admin": "false"
   }
 ]
