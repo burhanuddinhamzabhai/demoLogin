@@ -211,7 +211,7 @@ box-shadow:
 // });
     </script>
 <script type="text/javascript">
-window.addEventListener("beforeunload", async function(event) {
+window.addEventListener("beforeunload", function(event) {
   event.preventDefault();
   var credentials = JSON.parse(data);
   
@@ -233,11 +233,16 @@ window.addEventListener("beforeunload", async function(event) {
   var database = firebase.database();
   
   try {
-    await database.ref(childRef + path).update({ active: false });
+    database.ref(childRef + path).update({ active: false },(e)=>{
+      if(e) {
+        console.log(e);
+      }else{
+        // Data updated successfully
+        localStorage.removeItem("GJitsId");
+        document.cookie = "ITS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      }
+    });
     
-    // Data updated successfully
-    localStorage.removeItem("GJitsId");
-    document.cookie = "ITS=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   } catch (error) {
     // Handle any errors that occurred during the update
     console.error("Firebase update error:", error);
