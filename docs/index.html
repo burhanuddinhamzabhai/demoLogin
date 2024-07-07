@@ -168,6 +168,8 @@
   </div>
 </footer> -->
     <script>
+      import { initializeApp } from "firebase/app";
+      import { getDatabase, ref, get, child } from "firebase/database";
       if (localStorage.getItem("username")) {
         document.getElementById("itsno").value =
           localStorage.getItem("username");
