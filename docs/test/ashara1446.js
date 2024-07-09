@@ -200,18 +200,8 @@
     "Admin": "false"
   },
   {
-    "ITS_ID": 78611052,
-    "Full_Name": "Dawodi Bohra Jamaat",
-    "Admin": "false"
-  },
-  {
     "ITS_ID": 60460528,
     "Full_Name": "Rumana Bai Mubashir Bhai Morawala",
-    "Admin": "false"
-  },
-  {
-    "ITS_ID": 78611052,
-    "Full_Name": "Dawodi Bohra Jamaat",
     "Admin": "false"
   },
   {
@@ -792,6 +782,16 @@
   {
     "ITS_ID": 60430843,
     "Full_Name": "Zubaida bai Shk Abbasbhai Lokhandwala",
+    "Admin": "false"
+  },
+  {
+    "ITS_ID": 20300231,
+    "Full_Name": "Kayam bhai Godhrawala",
+    "Admin": "false"
+  },
+  {
+    "ITS_ID": 30425548,
+    "Full_Name": "Burhanuddin Murtaza Lakdawala",
     "Admin": "false"
   }
 ]
