@@ -785,12 +785,12 @@
     "Admin": "false"
   },
   {
-    "ITS_ID": 20300231123,
+    "ITS_ID": 20300231,
     "Full_Name": "Kayam bhai Godhrawala",
     "Admin": "false"
   },
   {
-    "ITS_ID": 30425548123,
+    "ITS_ID": 30425548,
     "Full_Name": "Burhanuddin Murtaza Lakdawala",
     "Admin": "false"
   },
