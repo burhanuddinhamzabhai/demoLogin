@@ -139,7 +139,7 @@
               </div>
               <div class="mt-4 items-center flex justify-between">
                 <p class="px-4 py-1 text-center text-black font-medium w-full">
-                  Version 27.06.2026.326
+                  Version 29.06.2026.327
                 </p>
               </div>
               <!-- <div class="flex items-center flex-wrap cursor-pointer bg-white rounded px-2 mt-5">
@@ -274,24 +274,7 @@
         // Fetch the value
         dbRef.once('value').then(function(snapshot) {
           if (snapshot.exists()) {
-            console.log(snapshot.val());
-            console.log(snapshot.val().active)
-            if(snapshot.val().active === true){
-              alert("User is already logged-in.");
-              document.getElementById("loginBtn").innerHTML = "Login";
-            }else if (snapshot.val().active === false){
-               database.ref(childRef + path).update(
-          {
-            active:true
-          },
-          (error) => {
-            if (error) {
-              // The write failed...
-              console.log("error:" + error);
-              
-            } else {
-              // Data saved successfully!
-              localStorage.setItem("GJitsId",itsnum);
+            localStorage.setItem("GJitsId",itsnum);
               var checkbox = document.getElementById("rememberMe").checked;
               if (checkbox) {
                 localStorage.setItem("username", itsnum);
@@ -300,10 +283,36 @@
               }
               console.log("data saved");
               window.location.href = "serverB.html";
-            }
-          }
-        );
-            }
+        //     console.log(snapshot.val());
+        //     console.log(snapshot.val().active)
+        //     if(snapshot.val().active === true){
+        //       alert("User is already logged-in.");
+        //       document.getElementById("loginBtn").innerHTML = "Login";
+        //     }else if (snapshot.val().active === false){
+        //        database.ref(childRef + path).update(
+        //   {
+        //     active:true
+        //   },
+        //   (error) => {
+        //     if (error) {
+        //       // The write failed...
+        //       console.log("error:" + error);
+              
+        //     } else {
+        //       // Data saved successfully!
+        //       localStorage.setItem("GJitsId",itsnum);
+        //       var checkbox = document.getElementById("rememberMe").checked;
+        //       if (checkbox) {
+        //         localStorage.setItem("username", itsnum);
+        //       } else if (!checkbox && localStorage.getItem("username")) {
+        //         localStorage.removeItem("username");
+        //       }
+        //       console.log("data saved");
+        //       window.location.href = "serverB.html";
+        //     }
+        //   }
+        // );
+        //     }
           } else {
             console.log("No data available");
             database.ref(childRef + path).set(
